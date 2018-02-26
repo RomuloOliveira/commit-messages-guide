@@ -44,9 +44,9 @@ Use InventoryBackendPool to retrieve inventory backend
 Used InventoryBackendPool to retrieve inventory backend
 ```
 
-_But why use it in the imperative form?_
+_But why use the imperative form?_
 
-A commit message describes what the referring change actually **does**, its effects, not what was done.
+A commit message describes what the referenced change actually **does**, its effects, not what was done.
 
 [This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages in imperative form:
 
@@ -80,7 +80,7 @@ add `use` method to Credit model
 
 The reason that the first letter should be capitalized is to follow the grammar rule of using capital letters at the beginning of sentences.
 
-The use of this practice may very from person to person, team to team, or even from language to language.
+The use of this practice may vary from person to person, team to team, or even from language to language.
 Capitalized or not, an important point is to stick to a single standard and follow it.
 
 ### Try to communicate what the change does without having to look at the source code
