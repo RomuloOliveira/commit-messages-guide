@@ -224,6 +224,43 @@ Resolves: #123
 See also: #456, #789
 ```
 
+## Rebase vs _Merge_
+
+This section is a **Tl;DR** of the excellent [Atlassian's article Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+
+![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
+
+### Rebase
+
+**TL;DR:** Applies your branch commits, one by one, upon the base branch, generating a new tree.
+
+![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
+
+### _Merge_
+
+**TL;DR:** Creates a new commit, called _merge commit_, with the differences between the two branches.
+
+![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
+
+### Why some people prefer rebase over merge?
+
+I particularly prefer rebase over merge. The reasons include:
+
+* It generates a "clean" history, without unnecessary merge commits
+* _What you see is what you get_, i.e., in a code review all changes come from a specific and entitled commit, avoiding changes hidden in merge commits
+* More merges are resolved by the commiter, and every merge change is in a commit with a proper message
+    * It's unusual to dig in and review merge commits, avoiding them ensure all changes have a commit where they belong
+
+### When to use squash
+
+Squash is the process of taking a series of commits and squashing them into a single commit.
+
+It's useful in several situations, e.g.:
+
+- Reduce commits with little or no context (typo corrections, formatting, forgotten stuff)
+- Join different changes that makes more sense in a single commit
+- Rewrite _work in progress_ commits
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
@@ -237,3 +274,5 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
 - [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+- [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- [Pro Git Book - Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
