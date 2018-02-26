@@ -144,6 +144,25 @@ Additional blank lines are considered as a part of the message body.
 
 Characters like `-`, `*` and \` are elements that improve readability.
 
+### Avoid generic messages or messages without any context
+
+```
+# Bad
+Fix this
+
+Fix stuff
+
+It should work now
+
+Change stuff
+
+Adjust css
+```
+
+### Limit the number of columns
+
+[It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use 50 characters for the subject and 72 for the body.
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
@@ -155,3 +174,4 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
 ## Inspirations, sources and further reading
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+- [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
