@@ -65,6 +65,23 @@ If applied, this commit will use InventoryBackendPool to retrieve inventory back
 If applied, this commit will used InventoryBackendPool to retrieve inventory backend
 ```
 
+### Capitalize the first letter
+
+```
+# Good
+Add `use` method to Credit model
+```
+
+```
+# Bad
+add `use` method to Credit model
+```
+
+The reason that the first letter should be capitalized is to follow the grammar rule of using capital letters at the beginning of sentences.
+
+The use of this practice may very from person to person, team to team, or even from language to language.
+Capitalized or not, an important point is to stick to a single standard and follow it.
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
