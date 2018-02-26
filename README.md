@@ -18,6 +18,15 @@ The image bellow show how git stores data over time, in which each "Version" is 
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
+## Why commit messages are important?
+
+- To speed up and make easy code reviews
+- To help in the understanding of a change
+- To explain "the whys" that cannot be described only with code
+- To help future maintainers to figure out why and how the changes were made, making easy troubleshooting and debug
+
+To maximize those outcomes, we can use some good practices and standards described in the next section.
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
