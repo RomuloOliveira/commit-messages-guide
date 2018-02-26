@@ -211,7 +211,7 @@ Resolves: #123
 See also: #456, #789
 ```
 
-## Rebase vs _Merge_
+## Rebase vs. Merge
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
@@ -221,7 +221,7 @@ See also: #456, #789
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
-### _Merge_
+### Merge
 
 **TL;DR:** Cria um novo _commit_, chamado de _Merge commit_, com as diferenças entre a sua árvore e a árvore de base
 
@@ -289,7 +289,7 @@ pick 9b81c72 Add "Rebase vs Merge" section
 # Note that empty commits are commented out
 ```
 
-### fixup
+#### fixup
 
 Útil para facilitar a limpeza sem perder tempo/trabalho com um rebase.
 [Exemplos](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html).
@@ -307,7 +307,7 @@ $ git cherry-pick 790ab21
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-### git add/checkout/reset [--patch | -p]
+### add/checkout/reset [--patch | -p]
 
 Exemplo de diff:
 
@@ -326,7 +326,7 @@ index 7b45277..6b1993c 100644
 
 +### Template
 +
-+This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
++This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in the [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 +
  ## Contributing
 
@@ -370,7 +370,7 @@ Stage this hunk [y,n,q,a,d,/,j,J,g,e,?]?
 
 +### Template
 +
-+This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
++This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in the [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 +
  ## Contributing
 

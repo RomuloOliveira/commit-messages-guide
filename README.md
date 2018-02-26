@@ -2,7 +2,7 @@
 
 A guide to understand the importance of commit messages and how to write them well.
 
-It may help you to learn what a commit is, why is it important to write good messages, best practices and some tips to plan and (re)write a good commit history.
+It may help you to learn what a commit is, why it is important to write good messages, best practices and some tips to plan and (re)write a good commit history.
 
 ## Available languages
 
@@ -11,26 +11,26 @@ It may help you to learn what a commit is, why is it important to write good mes
 
 ## What is a "commit"?
 
-In a simple and roughly way, a commit from is a kind of a _snapshot_ of your local files, written in your local repository.
+In simple terms, a commit is a _snapshot_ of your local files, written in your local repository.
 Contrary to what some people think, [git doesn't store only the difference between the files, it stores a full version of all files](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
-For files that didn't change from a commit to another, git stores just a link to the previous identical file that is already stored.
+For files that didn't change from one commit to another, git stores just a link to the previous identical file that is already stored.
 
-The image bellow show how git stores data over time, in which each "Version" is a commit:
+The image below shows how git stores data over time, in which each "Version" is a commit:
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
-## Why commit messages are important?
+## Why are commit messages important?
 
-- To speed up and make easy code reviews
+- To speed up and streamline code reviews
 - To help in the understanding of a change
 - To explain "the whys" that cannot be described only with code
-- To help future maintainers to figure out why and how the changes were made, making easy troubleshooting and debug
+- To help future maintainers figure out why and how changes were made, making troubleshooting and debugging easier
 
 To maximize those outcomes, we can use some good practices and standards described in the next section.
 
 ## Good practices
 
-These are some practices collected from my experience, aswell from internet articles and other guides. If you have others (or disagree with some) feel free to open a Pull Request and contribute.
+These are some practices collected from my experiences, internet articles, and other guides. If you have others (or disagree with some) feel free to open a Pull Request and contribute.
 
 ### Use imperative form
 
@@ -48,7 +48,7 @@ _But why use it in the imperative form?_
 
 A commit message describes what the referring change actually **does**, its effects, not what was done.
 
-[This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages and in imperate form:
+[This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages in imperative form:
 
 ```
 If applied, this commit will <commit message>
@@ -106,7 +106,7 @@ Increase left padding between textbox and layout frame
 Adjust css
 ```
 
-It is useful in many scenarios (e.g., multiple commits, several changes and refactors) to help reviewrs understand what the committer was thinking.
+It is useful in many scenarios (e.g. multiple commits, several changes and refactors) to help reviewers understand what the committer was thinking.
 
 ### Use the message body to explain "why", "for what", "how" and additional details
 
@@ -162,13 +162,13 @@ Adjust css
 
 ### Limit the number of columns
 
-[It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use 50 characters for the subject and 72 for the body.
+[It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use a maximum of 50 characters for the subject and 72 for the body.
 
 ### Keep language consistency
 
-This applies more for contributors which English is not the first language or for repositories with multiple country contributors.
+For project owners: Choose a language and write all commit messages using that language. Ideally it should match the code comments, default translation locale (for localized projects), etc.
 
-Chose a language and write messages only using it.
+For contributors: Write your commit messages using the same language as the existing commit history.
 
 ```
 # Good
@@ -193,7 +193,7 @@ cdcdcd Agora vai
 
 ### Template
 
-This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
+This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in the [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 
 ```
 Summarize changes in around 50 characters or less
@@ -225,9 +225,9 @@ Resolves: #123
 See also: #456, #789
 ```
 
-## Rebase vs _Merge_
+## Rebase vs. Merge
 
-This section is a **Tl;DR** of the excellent [Atlassian's article Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+This section is a **TL;DR** of Atlassian's excellent tutorial, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
@@ -237,37 +237,36 @@ This section is a **Tl;DR** of the excellent [Atlassian's article Merging vs. Re
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
-### _Merge_
+### Merge
 
-**TL;DR:** Creates a new commit, called _merge commit_, with the differences between the two branches.
+**TL;DR:** Creates a new commit, called (appropriately) a _merge commit_, with the differences between the two branches.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
-### Why some people prefer rebase over merge?
+### Why do some people prefer rebase over merge?
 
 I particularly prefer rebase over merge. The reasons include:
 
 * It generates a "clean" history, without unnecessary merge commits
 * _What you see is what you get_, i.e., in a code review all changes come from a specific and entitled commit, avoiding changes hidden in merge commits
-* More merges are resolved by the commiter, and every merge change is in a commit with a proper message
-    * It's unusual to dig in and review merge commits, avoiding them ensure all changes have a commit where they belong
+* More merges are resolved by the committer, and every merge change is in a commit with a proper message
+    * It's unusual to dig in and review merge commits, so avoiding them ensures all changes have a commit where they belong
 
-### When to use squash
+### When to squash
 
-Squash is the process of taking a series of commits and squashing them into a single commit.
+"Squashing" is the process of taking a series of commits and condensing them into a single commit.
 
 It's useful in several situations, e.g.:
 
-- Reduce commits with little or no context (typo corrections, formatting, forgotten stuff)
-- Join different changes that makes more sense in a single commit
-- Rewrite _work in progress_ commits
+- Reducing commits with little or no context (typo corrections, formatting, forgotten stuff)
+- Joining separate changes that make more sense when applied together
+- Rewriting _work in progress_ commits
 
 ## Useful git commands
 
 ### rebase -i
 
 Use it to squash commits, edit messages, rewrite/delete/reorder commits, etc.
-Usado para fazer _squash_, editar mensagens, editar/apagar/reordenar _commits_, etc.
 
 ```
 pick 002a7cc Improve description and update document title
@@ -306,14 +305,14 @@ pick 9b81c72 Add "Rebase vs Merge" section
 # Note that empty commits are commented out
 ```
 
-### fixup
+#### fixup
 
 Use it to clean up commits easily and without needing a more complex rebase.
 [This article](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) has very good examples of how and when to do it.
 
 ### cherry-pick
 
-It is very useful to appy that commit you did in the wrong branch, without the need to code it again.
+It is very useful to apply that commit you made on the wrong branch, without the need to code it again.
 
 Example:
 
@@ -324,7 +323,7 @@ $ git cherry-pick 790ab21
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-### git add/checkout/reset [--patch | -p]
+### add/checkout/reset [--patch | -p]
 
 Let's say we have the following diff:
 
@@ -343,7 +342,7 @@ index 7b45277..6b1993c 100644
 
 +### Template
 +
-+This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
++This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in the [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 +
  ## Contributing
 
@@ -387,7 +386,7 @@ Stage this hunk [y,n,q,a,d,/,j,J,g,e,?]?
 
 +### Template
 +
-+This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
++This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in the [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 +
  ## Contributing
 
