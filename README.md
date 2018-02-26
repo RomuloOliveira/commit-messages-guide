@@ -27,6 +27,44 @@ The image bellow show how git stores data over time, in which each "Version" is 
 
 To maximize those outcomes, we can use some good practices and standards described in the next section.
 
+## Good practices
+
+These are some practices collected from my experience, aswell from internet articles and other guides. If you have others (or disagree with some) feel free to open a Pull Request and contribute.
+
+### Use imperative form
+
+```
+# Good
+Use InventoryBackendPool to retrieve inventory backend
+```
+
+```
+# Bad
+Used InventoryBackendPool to retrieve inventory backend
+```
+
+_But why use it in the imperative form?_
+
+A commit message describes what the referring change actually **does**, its effects, not what was done.
+
+[This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages and in imperate form:
+
+```
+If applied, this commit will <commit message>
+```
+
+Examples:
+
+```
+# Good
+If applied, this commit will use InventoryBackendPool to retrieve inventory backend
+```
+
+```
+# Bad
+If applied, this commit will used InventoryBackendPool to retrieve inventory backend
+```
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
@@ -34,3 +72,7 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
 - Grammar and spelling corrections
 - Translation to other languages
 - Improvement of source referencing
+
+## Inspirations, sources and further reading
+
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
