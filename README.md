@@ -163,6 +163,33 @@ Adjust css
 
 [It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use 50 characters for the subject and 72 for the body.
 
+### Keep language consistency
+
+This applies more for contributors which English is not the first language or for repositories with multiple country contributors.
+
+Chose a language and write messages only using it.
+
+```
+# Good
+ababab Add `use` method to Credit model
+efefef Use InventoryBackendPool to retrieve inventory backend
+bebebe Fix method name of InventoryBackend child classes
+```
+
+```
+# Good (Portuguese example)
+ababab Adiciona o método `use` ao model Credit
+efefef Usa o InventoryBackendPool para recuperar o backend de estoque
+bebebe Corrige nome de método na classe InventoryBackend
+```
+
+```
+# Bad (mixes English and Portuguese)
+ababab Usa o InventoryBackendPool para recuperar o backend de estoque
+efefef Add `use` method to Credit model
+cdcdcd Agora vai
+```
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
