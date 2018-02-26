@@ -261,6 +261,150 @@ It's useful in several situations, e.g.:
 - Join different changes that makes more sense in a single commit
 - Rewrite _work in progress_ commits
 
+## Useful git commands
+
+### rebase -i
+
+Use it to squash commits, edit messages, rewrite/delete/reorder commits, etc.
+Usado para fazer _squash_, editar mensagens, editar/apagar/reordenar _commits_, etc.
+
+```
+pick 002a7cc Improve description and update document title
+pick 897f66d Add contributing section
+pick e9549cf Add a section of Available languages
+pick ec003aa Add "What is a commit" section"
+pick bbe5361 Add source referencing as a point of help wanted
+pick b71115e Add a section explaining the importance of commit messages
+pick 669bf2b Add "Good practices" section
+pick d8340d7 Add capitalization of first letter practice
+pick 925f42b Add a practice to encourage good descriptions
+pick be05171 Add a section showing good uses of message body
+pick d115bb8 Add generic messages and column limit sections
+pick 1693840 Add a section about language consistency
+pick 80c5f47 Add commit message template
+pick 8827962 Fix triple "m" typo
+pick 9b81c72 Add "Rebase vs Merge" section
+
+# Rebase 9e6dc75..9b81c72 onto 9e6dc75 (15 commands)
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+```
+
+### fixup
+
+Use it to clean up commits easily and without needing a more complex rebase.
+[This article](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) has very good examples of how and when to do it.
+
+### cherry-pick
+
+It is very useful to appy that commit you did in the wrong branch, without the need to code it again.
+
+Example:
+
+```
+$ git cherry-pick 790ab21
+[master 094d820] Fix English grammar in Contributing
+ Date: Sun Feb 25 23:14:23 2018 -0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+### git add/checkout/reset [--patch | -p]
+
+Let's say we have the following diff:
+
+```diff
+diff --git a/README.md b/README.md
+index 7b45277..6b1993c 100644
+--- a/README.md
++++ b/README.md
+@@ -186,10 +186,13 @@ bebebe Corrige nome de método na classe InventoryBackend
+ ``
+ # Bad (mixes English and Portuguese)
+ ababab Usa o InventoryBackendPool para recuperar o backend de estoque
+-efefef Add `use` method to Credit model
+ cdcdcd Agora vai
+ ``
+
++### Template
++
++This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
++
+ ## Contributing
+
+ Any kind of help would be appreciated. Example of topics that you can help me with:
+@@ -202,3 +205,4 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
+
+ - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+ - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
++- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+```
+
+We can use `git add -p` to add only the patches we want to, without the need to change code that is already written.
+It's useful to split a big change into smaller commits or to reset/checkout specific changes.
+
+```
+Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]? s
+Split into 2 hunks.
+```
+
+#### hunk 1
+
+```diff
+@@ -186,7 +186,6 @@
+ ``
+ # Bad (mixes English and Portuguese)
+ ababab Usa o InventoryBackendPool para recuperar o backend de estoque
+-efefef Add `use` method to Credit model
+ cdcdcd Agora vai
+ ``
+
+Stage this hunk [y,n,q,a,d,/,j,J,g,e,?]?
+```
+
+#### hunk 2
+
+```diff
+@@ -190,6 +189,10 @@
+ ``
+ cdcdcd Agora vai
+ ``
+
++### Template
++
++This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
++
+ ## Contributing
+
+ Any kind of help would be appreciated. Example of topics that you can help me with:
+Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
+
+```
+
+#### hunk 3
+
+```diff
+@@ -202,3 +205,4 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
+
+ - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+ - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
++- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+```
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
