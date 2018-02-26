@@ -405,6 +405,10 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
+## Other interesting stuff
+
+https://whatthecommit.com/
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
