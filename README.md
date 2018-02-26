@@ -24,3 +24,4 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
 
 - Grammar and spelling corrections
 - Translation to other languages
+- Improvement of source referencing
