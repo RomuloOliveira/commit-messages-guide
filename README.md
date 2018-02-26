@@ -82,6 +82,31 @@ The reason that the first letter should be capitalized is to follow the grammar 
 The use of this practice may very from person to person, team to team, or even from language to language.
 Capitalized or not, an important point is to stick to a single standard and follow it.
 
+### Try to communicate what the change does without having to look at the source code
+
+```
+# Good
+Add `use` method to Credit model
+
+```
+
+```
+# Bad
+Add `use` method
+```
+
+```
+# Good
+Increase left padding between textbox and layout frame
+```
+
+```
+# Bad
+Adjust css
+```
+
+It is useful in many scenarios (e.g., multiple commits, several changes and refactors) to help reviewrs understand what the committer was thinking.
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
