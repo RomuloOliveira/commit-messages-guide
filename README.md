@@ -107,6 +107,43 @@ Adjust css
 
 It is useful in many scenarios (e.g., multiple commits, several changes and refactors) to help reviewrs understand what the committer was thinking.
 
+### Use the message body to explain "why", "for what", "how" and additional details
+
+```
+# Good
+Fix method name of InventoryBackend child classes
+
+Classes derived from InventoryBackend were not
+respecting the base class interface.
+
+It worked because cart was calling the backend implementation
+incorrectly.
+```
+
+```
+# Good
+Serialize and deserialize credits to json in Cart
+
+Convert the Credit instances to dict for two main reasons:
+
+  - Pickle relies on file path for classes and we do not want to break up
+    everything if a refactor is needed
+  - Dict and built-in types are picklable by default
+```
+
+```
+# Good
+Add `use` method to Credit
+
+Change from namedtuple to class because we need to
+setup a new attribute (in_use_amount) with a new value
+```
+
+The subject and the body of the messages are separated by a blank line.
+Additional blank lines are considered as a part of the message body.
+
+Characters like `-`, `*` and \` are elements that improve readability.
+
 ## Contributing
 
 Any kind of help would be appreciated. Example of topics that you can help me with:
