@@ -1,39 +1,43 @@
-# Commit messages guide
+# Commit Messages Guide
 
-A guide to understand the importance of commit messages and how to write them well.
+Ein Leitfaden um die Wichtigkeit von Commit-Messages zu verstehen und diese richtig zu formulieren.
 
-It may help you to learn what a commit is, why is it important to write good messages, best practices and some tips to plan and (re)write a good commit history.
+Verstehe was ein Commit ist, warum es wichtig ist eine gute Commit-Message zu schreiben, Best-Practices und ein paar Tipps um eine saubere Commit-Historie zu planen oder vielleicht sogar nachträglich noch anzupassen.
 
-## Available languages
+#### Hinweis des Übersetzers
 
-- [English](README.md)
-- [Português](README_pt-BR.md)
+Auch wenn das eine Übersetzung darstellen soll, empfiehlt es sich, alle Commit-Messages auf Englisch zu schreiben, deshalb sind die Beispiele nicht übersetzt.
+
+## Verfügbare Sprachen
+
+- [Englisch](README.md)
+- [Portugiesisch](README_pt-BR.md)
 - [Deutsch](README_de-DE.md)
 
-## What is a "commit"?
+## Was ist ein "Commit"?
 
-In a simple and roughly way, a commit from is a kind of a _snapshot_ of your local files, written in your local repository.
-Contrary to what some people think, [git doesn't store only the difference between the files, it stores a full version of all files](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
-For files that didn't change from a commit to another, git stores just a link to the previous identical file that is already stored.
+Ganz einfach beschrieben ist ein Commit eine Art _Schnappschuss_ deiner lokalen Dateien in deinem Repository (dein Projektordner).
+Im Gegensatz zur geläufigen Annahme [speichert Git nicht nur die Unterschiede in den Dateien sonder immer die gesamte Datei (Quelle auf Englisch)](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Für Dateien die sich von einem auf den anderen Commit nicht geändert haben, speichert Git lediglich einen Link zur einer bereits gespeicherten Version in einem vorangegangenen Commit.
 
-The image bellow show how git stores data over time, in which each "Version" is a commit:
+Die folgende Grafik zeigt wie Git die Daten mit der Zeit speichert. Jede "Version" meint hier einen Commit.
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
-## Why commit messages are important?
+## Warum sind Commit-Messages wichtig?
 
-- To speed up and make easy code reviews
-- To help in the understanding of a change
-- To explain "the whys" that cannot be described only with code
-- To help future maintainers to figure out why and how the changes were made, making easy troubleshooting and debug
+- Um Code-Reviews zu beschleunigen und zu vereinfachen
+- Um die erzielte Änderung besser verstehen zu können
+- Um _die_ Gründe zu erläutern die so nicht aus dem Code hervorgehen (Grundsatzentscheidungen)
+- um zukünfitigen Entwicklern zu helfen zu verstehen wie und warum Änderungen gemacht wurden – was die Fehlersuche und -behebung vereinfacht
 
-To maximize those outcomes, we can use some good practices and standards described in the next section.
+Um diese und noch mehr Vorteile möglichst effizient nutzen zu können, sollten wir uns an die folgenden Praktiken und Stardards halten.
 
-## Good practices
+## Praktiken
 
-These are some practices collected from my experience, aswell from internet articles and other guides. If you have others (or disagree with some) feel free to open a Pull Request and contribute.
+Dies sind Praktiken aus meiner eigenen Erfahrung sowie aus anderen Artikeln/Guides aus dem Internet. Wenn du noch mehr Tipps hast oder manche dieser Praktiken für nicht sinnvoll hältst beantrage gerne eine Änderung via Pull Request.
 
-### Use imperative form
+### Imperativ verwenden
 
 ```
 # Good
@@ -45,17 +49,17 @@ Use InventoryBackendPool to retrieve inventory backend
 Used InventoryBackendPool to retrieve inventory backend
 ```
 
-_But why use it in the imperative form?_
+_Warum soll ich den Imperativ benutzen?_
 
-A commit message describes what the referring change actually **does**, its effects, not what was done.
+Eine Commit-Message beschreibt was die Änderung tatsächlich **tut** – ihre Auswirkungen – nicht was vorher war.
 
-[This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages and in imperate form:
+[Dieser sehr gute Artikel von Chris Beams (Quelle auf Englisch)](https://chris.beams.io/posts/git-commit/) gibt uns einen simplen Satzbau vor, dieser hilft dabei bessere Commit-Messages im imperativ zu schreiben:
 
 ```
-If applied, this commit will <commit message>
+If applied, this commit will: <commit message>
 ```
 
-Examples:
+Beispiel:
 
 ```
 # Good
@@ -67,7 +71,7 @@ If applied, this commit will use InventoryBackendPool to retrieve inventory back
 If applied, this commit will used InventoryBackendPool to retrieve inventory backend
 ```
 
-### Capitalize the first letter
+### Große Anfangsbuchstaben
 
 ```
 # Good
@@ -79,12 +83,13 @@ Add `use` method to Credit model
 add `use` method to Credit model
 ```
 
-The reason that the first letter should be capitalized is to follow the grammar rule of using capital letters at the beginning of sentences.
+Diese Regelung macht grammatikalisch schlichtweg Sinn, da man den grammatikalischen Regeln bzgl. Großbuchstaben am Satzanfang gerecht wird.
 
-The use of this practice may very from person to person, team to team, or even from language to language.
-Capitalized or not, an important point is to stick to a single standard and follow it.
+Diese Regelung kann von Entwickler zu Entwickler, Team zu Team oder auch Sprache zu Sprache unterschiedlich sein.
 
-### Try to communicate what the change does without having to look at the source code
+Großschreiben oder nicht, wichtig ist nur, dass man bei einer Variante bleibt.
+
+### Versuche _genau_ zu beschreiben, was die Änderung macht, auch ohne dass man in den Code gucken muss.
 
 ```
 # Good
@@ -107,9 +112,9 @@ Increase left padding between textbox and layout frame
 Adjust css
 ```
 
-It is useful in many scenarios (e.g., multiple commits, several changes and refactors) to help reviewrs understand what the committer was thinking.
+Dies ist in vielen Situationen (z.B.: mehrer kleine Commits, Refactoring) sinnvoll um besser zu verstehen, was sich der Entwickler gedacht hat.
 
-### Use the message body to explain "why", "for what", "how" and additional details
+### "Warum", "Wozu", "Wie" und andere Details gehören in die Beschreibung der Commit-Message
 
 ```
 # Good
@@ -135,18 +140,17 @@ Convert the Credit instances to dict for two main reasons:
 
 ```
 # Good
-Add `use` method to Credit
+Add `use` method to Credit model
 
 Change from namedtuple to class because we need to
 setup a new attribute (in_use_amount) with a new value
 ```
 
-The subject and the body of the messages are separated by a blank line.
-Additional blank lines are considered as a part of the message body.
+Titel bzw. Betreff der Commit-Message und die Beschreibung müssen mit einer Leerzeile getrennt werden. Alle weiteren Leerzeilen oder Absätze werden als Teil der Beschreibung gewertet.
 
-Characters like `-`, `*` and \` are elements that improve readability.
+Trenn- oder Aufzählungszeichen, wie z.B.: `-`, `*` oder `\` verbessern die Lesbarkeit der Beschreibung.
 
-### Avoid generic messages or messages without any context
+### Vermeide allgemeingültige oder kontextfreie Beschreibungen
 
 ```
 # Bad
@@ -161,15 +165,15 @@ Change stuff
 Adjust css
 ```
 
-### Limit the number of columns
+### Limitiere die Länge Commit-Message
 
-[It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use 50 characters for the subject and 72 for the body.
+[Es wird empfohlen (Quelle in ENG)](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) maximal 50 Zeichen für den Titel/Betreff und 72 Zeichen für die Nachricht zu verwenden.
 
-### Keep language consistency
+### Bleibe in einer Sprache
 
-This applies more for contributors which English is not the first language or for repositories with multiple country contributors.
+Dies gilt vor allem für Entwickler für die Englisch nicht die Muttersprache ist. Logischerweise sollte man sich immer dem etablierten Standard anpassen – ganz besonders bei Repositories mit Entwicklern aus vielen verschiedenen Ländern.
 
-Chose a language and write messages only using it.
+Entscheide dich für eine Sprache und bleibe dabei.
 
 ```
 # Good
@@ -179,22 +183,22 @@ bebebe Fix method name of InventoryBackend child classes
 ```
 
 ```
-# Good (Portuguese example)
-ababab Adiciona o método `use` ao model Credit
-efefef Usa o InventoryBackendPool para recuperar o backend de estoque
-bebebe Corrige nome de método na classe InventoryBackend
+# Good (German example)
+ababab Fügt die `use` Funktion dem Credit Model hinzu
+efefef Nutzt den InventoryBackendPool um aufs Bestands-BackEnd zuzugreifen
+bebebe Korrigiert den Methodennamen der InventoryBackend Kind-Klassen
 ```
 
 ```
-# Bad (mixes English and Portuguese)
-ababab Usa o InventoryBackendPool para recuperar o backend de estoque
+# Bad (mixes English and German)
+ababab Fügt die `use` Funktion dem Credit Model hinzu
 efefef Add `use` method to Credit model
-cdcdcd Agora vai
+cdcdcd Fix method name of InventoryBackend child classes
 ```
 
 ### Template
 
-This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in [Pro Git Book](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
+Das folgende Template, [im Original von Tim Pope (Quelle auf Englisch)](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), erschienen so auch in dem Buch [Pro Git Book (Quelle auf Englisch)](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 
 ```
 Summarize changes in around 50 characters or less
@@ -228,47 +232,47 @@ See also: #456, #789
 
 ## Rebase vs _Merge_
 
-This section is a **Tl;DR** of the excellent [Atlassian's article Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+Dieser Abschnitt ist ein **Tl;DR** des lesenswerten Artikels [Atlassian's article Merging vs. Rebasing (Quelle auf Englisch)](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
 ### Rebase
 
-**TL;DR:** Applies your branch commits, one by one, upon the base branch, generating a new tree.
+**TL;DR:** Wendet die Änderungen des aktuellen Branches auf den Stand des Basis-Branches an.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
 ### _Merge_
 
-**TL;DR:** Creates a new commit, called _merge commit_, with the differences between the two branches.
+**TL;DR:** Erstellt einen neuen Commit, auch _Merge-Commit_, dieser führt die Änderungen beider Branches zusammen.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
-### Why some people prefer rebase over merge?
+### Warum bevorzugen manche Entwickler rebase?
 
-I particularly prefer rebase over merge. The reasons include:
+Ich persönlich bevorzuge rebase. Gründe dafür sind unter anderem:
 
-* It generates a "clean" history, without unnecessary merge commits
-* _What you see is what you get_, i.e., in a code review all changes come from a specific and entitled commit, avoiding changes hidden in merge commits
-* More merges are resolved by the commiter, and every merge change is in a commit with a proper message
-    * It's unusual to dig in and review merge commits, avoiding them ensure all changes have a commit where they belong
+* Es entsteht eine "saubere" Historie, ohne unnötige Merge-Commits.
 
-### When to use squash
+* _What you see is what you get_, z.B.: in eine Code-Review sieht man wirklich jeden Commit. Es sind keine Änderungen in Merge-Commits versteckt.
+* Jedes Zusammenführen von Code geschiet einzeln durch den Entwickler, so hat jeder Merge einen eigenen Commit mit einer entsprechenen Commit-Message.
+    * Im Normalfall werden Merge-Commits in einer Code-Review nicht betrachtet. Hat jede Änderung/Zusammenführung einen eigenen Commit, kann man sicher sein, dass alles an der richtigen Stelle ist und betrachtet werden kann.
 
-Squash is the process of taking a series of commits and squashing them into a single commit.
+### Wann benutzt man squash
 
-It's useful in several situations, e.g.:
+Squash beschreibt eine Methode in der eine Reihe von Commits in einen einzelnen Commit zusammengefasst werden.
 
-- Reduce commits with little or no context (typo corrections, formatting, forgotten stuff)
-- Join different changes that makes more sense in a single commit
-- Rewrite _work in progress_ commits
+Hilfreich bei z.B.:
 
-## Useful git commands
+- dem Reduzieren von kleinen/kontextlosen Commits (Rechtschreibfehler, Formatierung, vergessene Änderungen)
+- dem Zusammenführen mehrere Commits die als Ganzes mehr Sinn ergeben
+- dem Neu-Verpacken von _work in progress_ Commits
+
+## Hilfreiche Git Kommandos
 
 ### rebase -i
 
-Use it to squash commits, edit messages, rewrite/delete/reorder commits, etc.
-Usado para fazer _squash_, editar mensagens, editar/apagar/reordenar _commits_, etc.
+Wird verwenet um Commits zu squashen, Commit-Messages zu bearbeiten, Neuschreiben/Löschen/Neuordnen von Commits, usw.
 
 ```
 pick 002a7cc Improve description and update document title
@@ -309,14 +313,14 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 ### fixup
 
-Use it to clean up commits easily and without needing a more complex rebase.
-[This article](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) has very good examples of how and when to do it.
+Wird verwendet um Commits einfach anzupassen ohne einen komplexen Rebase durchzuführen.
+[Dieser Artikel (Quelle auf Englisch)](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) beschreibt mit Beispielen wie und wann man einen fixup durchführt.
 
 ### cherry-pick
 
-It is very useful to appy that commit you did in the wrong branch, without the need to code it again.
+Sehr hilfreich wenn man einen Commit der z.B.: versehentlich im falschen Branch gepusht wurde auf den richtigen Branch anwenden will ohne diesen neuschreiben zu müssen.
 
-Example:
+Beispiel:
 
 ```
 $ git cherry-pick 790ab21
@@ -327,7 +331,7 @@ $ git cherry-pick 790ab21
 
 ### git add/checkout/reset [--patch | -p]
 
-Let's say we have the following diff:
+Angenommen wir haben die folgenden offenen Änderungen:
 
 ```diff
 diff --git a/README.md b/README.md
@@ -356,8 +360,7 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-We can use `git add -p` to add only the patches we want to, without the need to change code that is already written.
-It's useful to split a big change into smaller commits or to reset/checkout specific changes.
+Mit `git add -p` können wir nun ausschließlich die gewünschten Abschnitte zum Commit hinzufügen, ganz ohne dass wir bestehenden Code ändern müssen. Das ist hilfreich um größere Änderungen in mehrere kleine Commits aufzuteilen oder um ungewollte Änderungen gezielt rückgängig zu machen.
 
 ```
 Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]? s
@@ -407,20 +410,20 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-## Other interesting stuff
+## Sonstiges Interessantes
 
 https://whatthecommit.com/
 
-## Contributing
+## Mitwirken
 
-Any kind of help would be appreciated. Example of topics that you can help me with:
+Jede Art von Hilfe ist willkommen. Zum Beispiel zu den Themen:
 
-- Grammar and spelling corrections
-- Translation to other languages
-- Improvement of source referencing
-- Incorrect or incomplete information
+- Grammatik und Rechtschreibung
+- Übersetzung in andere Sprachen
+- Verbesserung der Quell-Referenzen
+- Falsche oder unvollständige Information
 
-## Inspirations, sources and further reading
+## Inspiration, Quellen und Lesenswertes
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
