@@ -1,5 +1,7 @@
 # Commit messages guide
 
+[![Diga obrigado!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
+
 Um guia para entender a importância das mensagens de commit e como escrevê-las bem.
 
 Pode te ajudar a aprender o que é um commit, saber porque é importante escrever boas mensages, boas práticas e dicas sobre como planejar e (re)escrever o seu histórico de commmits.
@@ -393,6 +395,10 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 ## Links interessantes
 
 https://whatthecommit.com/
+
+## Gostou?
+
+[Mandar um obrigado!](https://saythanks.io/to/RomuloOliveira)
 
 ## Contribuindo
 

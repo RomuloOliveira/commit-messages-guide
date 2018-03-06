@@ -1,5 +1,7 @@
 # Commit Messages Guide
 
+[![Sag danke!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
+
 Ein Leitfaden um die Wichtigkeit von Commit-Messages zu verstehen und diese richtig zu formulieren.
 
 Verstehe was ein Commit ist, warum es wichtig ist eine gute Commit-Message zu schreiben, Best-Practices und ein paar Tipps um eine saubere Commit-Historie zu planen oder vielleicht sogar nachträglich noch anzupassen.
@@ -413,6 +415,10 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 ## Sonstiges Interessantes
 
 https://whatthecommit.com/
+
+## Hat es dir gefallen?
+
+[Sag danke!](https://saythanks.io/to/RomuloOliveira)
 
 ## Mitwirken
 
