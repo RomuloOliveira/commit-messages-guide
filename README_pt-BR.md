@@ -251,11 +251,8 @@ Squash é o processo de pegar uma série de commits e juntá-los em um commit s�
 
 ### Quando evitar rebase ou squash?
 
-Tanto rebase e squash substituem commits que existem por novos. Portanto, não é recomendável usar esses commandos em branches/commits que estão aplicados em outras branches ou que existam no repositório remoto.
-
-Isso porque, quando fazemos o rebase ou squash de commits que nenhuma outra branch dependa e não existe no repositório remoto, não haverá nenhum efeito colateral. Porém, se os commits já existem em outras branches ou no repositório remoto, quando tentarmos enviar nossas modificações, git identificará que existe uma divergência entre os commits locais e remotos, e pedirá que os commits que existem no repositório sejam recuperados antes de enviar os novos, mais isso vai acabar duplicando os commits ou mantendo os commits que tentamos consolidar.
-
-Existem algumas maneiras de forçar o push para o repositório, mais isso seria muito arriscado em uma branch usada por outras pessoas, gerando conflitos para todos os outros.
+Evite _rebase_ e _squash_ em _commits_ públicos ou em _branches_ compartilhadas que outras pessoas possam ter trabalhado.
+_Rebase_ e _squash_ reescrevem a história sobrescrevendo commits existentes, fazendo isso em commits que existam em _branches_ compartilhadas (i.e., _commits_ enviados para repositórios remotos ou originados de outras branches) podem causar confusão e as pessoas podem perder suas modificações (tanto locais quanto remotas) por causa de divergências e conflitos.
 
 ## Comandos úteis
 

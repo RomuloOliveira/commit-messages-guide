@@ -267,11 +267,8 @@ It's useful in several situations, e.g.:
 
 ### When to avoid rebase or squash?
 
-Both rebase and squash commands substitutes existing commits for new ones. So it's not recommended to use with branches/commits that are being referenced by others or exists on the remote repository.
-
-Because when we are rebasing or squashing commits that anyone depends on and were not yet pushed to the remote repository, it will have no side effects. But, if the commits exist already on a remote repository and we try push our changes, git will identify that our commits diverge from the commits that exists on the repository and will fail requesting us to get those existing commits from the repository, but that would end of duplicating or maintaining the commits we tried change.
-
-There are ways to force the push to the repository, but that would be too dangerous to be done on a branch used by other people, generating conflicts to everyone else.
+Avoid rebase and squash in public commits or in shared branches where multiple people work on.
+Rebase and squash rewrite history and overwrite existing commits, doing it on commits that are on shared branches (i.e., commits pushed to remote repository or that comes from others branches) can cause confusion and people may lost their changes (both locally and remotely) because of divergent trees and conflicts.
 
 ## Useful git commands
 
