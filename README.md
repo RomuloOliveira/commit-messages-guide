@@ -265,6 +265,11 @@ It's useful in several situations, e.g.:
 - Joining separate changes that make more sense when applied together
 - Rewriting _work in progress_ commits
 
+### When to avoid rebase or squash?
+
+Avoid rebase and squash in public commits or in shared branches where multiple people work on.
+Rebase and squash rewrite history and overwrite existing commits, doing it on commits that are on shared branches (i.e., commits pushed to remote repository or that comes from others branches) can cause confusion and people may lost their changes (both locally and remotely) because of divergent trees and conflicts.
+
 ## Useful git commands
 
 ### rebase -i

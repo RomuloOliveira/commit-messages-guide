@@ -249,6 +249,11 @@ Squash é o processo de pegar uma série de commits e juntá-los em um commit s�
 - Mudanças que estão em _commits_ separados que fariam mais sentido parte de um só
 - _Commits WIP_
 
+### Quando evitar rebase ou squash?
+
+Evite _rebase_ e _squash_ em _commits_ públicos ou em _branches_ compartilhadas que outras pessoas possam ter trabalhado.
+_Rebase_ e _squash_ reescrevem a história sobrescrevendo commits existentes, fazendo isso em commits que existam em _branches_ compartilhadas (i.e., _commits_ enviados para repositórios remotos ou originados de outras branches) podem causar confusão e as pessoas podem perder suas modificações (tanto locais quanto remotas) por causa de divergências e conflitos.
+
 ## Comandos úteis
 
 ### rebase -i
