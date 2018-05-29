@@ -272,7 +272,7 @@ Hilfreich bei z.B.:
 
 ### Wann sollte man rebase bzw. squash vermeiden
 
-Vermeiden Sie die Verwndung von Rebase und Squash in öffentlichen Commits oder in Branches, in denen mehrere Personen arbeiten.
+Vermeiden Sie die Verwendung von Rebase und Squash in öffentlichen Commits oder in Branches, in denen mehrere Personen arbeiten.
 
 Rebase und Squash verändern die Historie der Commits und überschreiben bestehende Commits. Verwendet man rebase und squash auf Commits, die sich auf einen gemeinsam genutzten Branch befinden (d.h. Commits, die in ein Remote Repository verschoben wurden oder von anderen Branches stammen), erzeugt man unötige Verwirrung. Darüber hinaus besteht die Gefahr, dass Andere ihre Änderungen (sowohl lokal als auch auf dem Remote) verlieren, aufgrund von unterschiedlichen Trees und anderen Konflikten.
 
