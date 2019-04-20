@@ -85,7 +85,7 @@ Add `use` method to Credit model
 add `use` method to Credit model
 ```
 
-Diese Regelung macht grammatikalisch schlichtweg Sinn, da man den grammatikalischen Regeln bzgl. Großbuchstaben am Satzanfang gerecht wird.
+Diese Regelung ergibt grammatikalisch schlichtweg Sinn, da man den grammatikalischen Regeln bzgl. Großbuchstaben am Satzanfang gerecht wird.
 
 Diese Regelung kann von Entwickler zu Entwickler, Team zu Team oder auch Sprache zu Sprache unterschiedlich sein.
 
