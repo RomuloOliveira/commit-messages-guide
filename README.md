@@ -2,7 +2,7 @@
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
-A guide to understand the importance of commit messages and how to write them well.
+A guide to understanding the importance of commit messages and how to write them well.
 
 It may help you to learn what a commit is, why it is important to write good messages, best practices and some tips to plan and (re)write a good commit history.
 
@@ -120,7 +120,7 @@ Fix method name of InventoryBackend child classes
 Classes derived from InventoryBackend were not
 respecting the base class interface.
 
-It worked because cart was calling the backend implementation
+It worked because the cart was calling the backend implementation
 incorrectly.
 ```
 
@@ -132,7 +132,7 @@ Convert the Credit instances to dict for two main reasons:
 
   - Pickle relies on file path for classes and we do not want to break up
     everything if a refactor is needed
-  - Dict and built-in types are picklable by default
+  - Dict and built-in types are pickleable by default
 ```
 
 ```
@@ -169,7 +169,7 @@ Adjust css
 
 ### Keep language consistency
 
-For project owners: Choose a language and write all commit messages using that language. Ideally it should match the code comments, default translation locale (for localized projects), etc.
+For project owners: Choose a language and write all commit messages using that language. Ideally, it should match the code comments, default translation locale (for localized projects), etc.
 
 For contributors: Write your commit messages using the same language as the existing commit history.
 
@@ -246,9 +246,9 @@ This section is a **TL;DR** of Atlassian's excellent tutorial, ["Merging vs. Reb
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
-### Why do some people prefer rebase over merge?
+### Why do some people prefer to rebase over merge?
 
-I particularly prefer rebase over merge. The reasons include:
+I particularly prefer to rebase over merge. The reasons include:
 
 * It generates a "clean" history, without unnecessary merge commits
 * _What you see is what you get_, i.e., in a code review all changes come from a specific and entitled commit, avoiding changes hidden in merge commits
@@ -268,7 +268,7 @@ It's useful in several situations, e.g.:
 ### When to avoid rebase or squash?
 
 Avoid rebase and squash in public commits or in shared branches where multiple people work on.
-Rebase and squash rewrite history and overwrite existing commits, doing it on commits that are on shared branches (i.e., commits pushed to remote repository or that comes from others branches) can cause confusion and people may lost their changes (both locally and remotely) because of divergent trees and conflicts.
+Rebase and squash rewrite history and overwrite existing commits, doing it on commits that are on shared branches (i.e., commits pushed to a remote repository or that comes from others branches) can cause confusion and people may lose their changes (both locally and remotely) because of divergent trees and conflicts.
 
 ## Useful git commands
 
@@ -299,7 +299,7 @@ pick 9b81c72 Add "Rebase vs Merge" section
 # p, pick = use commit
 # r, reword = use commit, but edit the commit message
 # e, edit = use commit, but stop for amending
-# s, squash = use commit, but meld into previous commit
+# s, squash = use commit, but meld into the previous commit
 # f, fixup = like "squash", but discard this commit's log message
 # x, exec = run command (the rest of the line) using shell
 # d, drop = remove commit
@@ -362,7 +362,7 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-We can use `git add -p` to add only the patches we want to, without the need to change code that is already written.
+We can use `git add -p` to add only the patches we want to, without the need to change the code that is already written.
 It's useful to split a big change into smaller commits or to reset/checkout specific changes.
 
 ```
