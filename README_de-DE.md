@@ -31,13 +31,13 @@ Die folgende Grafik zeigt wie Git die Daten mit der Zeit speichert. Jede "Versio
 - Um Code-Reviews zu beschleunigen und zu vereinfachen
 - Um die erzielte Änderung besser verstehen zu können
 - Um _die_ Gründe zu erläutern die so nicht aus dem Code hervorgehen (Grundsatzentscheidungen)
-- um zukünfitigen Entwicklern zu helfen zu verstehen wie und warum Änderungen gemacht wurden – was die Fehlersuche und -behebung vereinfacht
+- Um zukünftigen Entwicklern zu helfen zu verstehen wie und warum Änderungen gemacht wurden – was die Fehlersuche und -behebung vereinfacht
 
-Um diese und noch mehr Vorteile möglichst effizient nutzen zu können, sollten wir uns an die folgenden Praktiken und Stardards halten.
+Um diese und noch mehr Vorteile möglichst effizient nutzen zu können, sollten wir uns an die folgenden Praktiken und Standards halten.
 
 ## Praktiken
 
-Dies sind Praktiken aus meiner eigenen Erfahrung sowie aus anderen Artikeln/Guides aus dem Internet. Wenn du noch mehr Tipps hast oder manche dieser Praktiken für nicht sinnvoll hältst beantrage gerne eine Änderung via Pull Request.
+Dies sind Praktiken aus meiner eigenen Erfahrung sowie aus anderen Artikeln/Guides aus dem Internet. Wenn du noch mehr Tipps hast oder manche dieser Praktiken für nicht sinnvoll hältst, beantrage gerne eine Änderung via Pull Request.
 
 ### Imperativ verwenden
 
