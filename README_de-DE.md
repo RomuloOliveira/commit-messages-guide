@@ -16,6 +16,7 @@ Auch wenn das eine Übersetzung darstellen soll, empfiehlt es sich, alle Commit-
 - [Portugiesisch](README_pt-BR.md)
 - [Deutsch](README_de-DE.md)
 - [Spanische](README_es-AR.md)
+- [Italiano](README_it-IT.md)
 
 ## Was ist ein "Commit"?
 

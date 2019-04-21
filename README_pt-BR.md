@@ -14,6 +14,7 @@ Pode te ajudar a aprender o que é um commit, saber porque é importante escreve
 - [Português](README_pt-BR.md)
 - [Alemão](README_de-DE.md)
 - [Espanhol](README_es-AR.md)
+- [Italiano](README_it-IT.md)
 
 ## O que é um _commit_?
 
