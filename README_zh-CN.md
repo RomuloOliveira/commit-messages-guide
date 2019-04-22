@@ -15,57 +15,57 @@
 
 ## 什么是“commit”？
 
-简单来讲，commit 就是在本地存储库中编写的本地文件的 _快照_。与一些人的想法不同的是，[git 不仅存储文件之间的差异，它还存储所有文件的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。对于没有从一个 commit 更改到另一个 commit 的文件，git 只存储到已经存储的相同文件的链接。
+简单来讲，commit 就是在本地存储库中编写的文件的 _快照_。与印象中不同的是，[git 不仅存储不同版本文件之间的差异，还存储了所有文件的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。对于两个 commit 之间没有被修改的文件，git 只存储指向前一个完全相同的文件的链接。
 
-下面的图片展示了 git 如何随着时间存储数据，其中每个“Version”都是一个 commit：
+下面的图片展示了 git 如何随着时间存储数据，其中每个 “Version” 都是一个 commit：
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
 ## 为什么 commit 信息很重要？
 
-- 为了加快和简化代码审查（code reviews）
-- 为了帮助理解一个更改
-- 为了解释不能只由代码描述的“为什么”
-- 为了帮助未来的维护人员弄清楚为什么以及如何产生的更改，从而使故障排查和调试更容易
+- 加快和简化代码审查（code reviews）
+- 帮助理解一个更改
+- 解释不能只由代码描述的“为什么”
+- 帮助未来的维护人员弄清楚为什么以及如何产生的更改，从而使故障排查和调试更容易
 
 为了最大化这些结果，我们可以使用下一节中描述的一些好的实践和标准。
 
 ## 好的实践
 
-这些是从我的经验、网络上的文章和其他指南中收集整理的一些实践。如果你有其他的实践（或不同意下面的某些），请随时打开 Pull Request 进行贡献。
+这些是从我的经验、互联网文章和其他指南中整理的一些实践经验。如果你有更多的经验（或持不同意见），请随时提交 Pull Request 提供帮助。
 
 ### 使用祈使句
 
 ```
 # Good
-Use InventoryBackendPool to retrieve inventory backend
+Use InventoryBackendPool to retrieve inventory backend （用 InventoryBackendPool 获取库存）
 ```
 
 ```
 # Bad
-Used InventoryBackendPool to retrieve inventory backend
+Used InventoryBackendPool to retrieve inventory backend （InventoryBackendPool 被用于获取库存）
 ```
 
 _不过为什么要使用祈使句呢？_
 
-一个 commit 信息描述了引用的更改实际**做**了什么，是它的效果，而不是被做了什么。
+commit 信息描述的是引用的变更部分实际上**做**了什么，它的效果，而不是因此被做了什么。
 
 [Chris Beams 的这篇优秀的文章](https://chris.beams.io/posts/git-commit/)为我们提供了一些简单的句子，可以帮助我们用祈使句编写更好的 commit 信息：
 
 ```
-If applied, this commit will <commit message>
+If applied, this commit will <commit message> （如获许可，此提交将会 <提交备注>）
 ```
 
 例子：
 
 ```
 # Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
+If applied, this commit will use InventoryBackendPool to retrieve inventory backend （如获许可，此提交将使用 InventoryBackendPool 获取库存）
 ```
 
 ```
 # Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
+If applied, this commit will used InventoryBackendPool to retrieve inventory backend （如获许可，InventoryBackendPool 将会被用于获取库存）
 ```
 
 ### 首字母大写
@@ -82,29 +82,29 @@ add `use` method to Credit model
 
 首字母大写的原因是遵守英文句子开头使用大写字母的语法规则。
 
-这种做法可能因人而异、因团队而异、甚至因语言而异。不管是否大写，重要的是要坚持一个标准并遵守它。
+这种做法可能因人而异、因团队而异、甚至因语言而异。不管是否大写，重要的是要制定一个标准并遵守它。
 
-### 尝试在不看源代码的情况下交流更改的内容
+### 尽量做到只看注释便可明白而无需查看变更内容
 
 ```
 # Good
-Add `use` method to Credit model
+Add `use` method to Credit model （为 Credit 模块添加 `use` 方法）
 
 ```
 
 ```
 # Bad
-Add `use` method
+Add `use` method （添加 `use` 方法）
 ```
 
 ```
 # Good
-Increase left padding between textbox and layout frame
+Increase left padding between textbox and layout frame （在 textbox 和 layout frame 之间添加向左对齐）
 ```
 
 ```
 # Bad
-Adjust css
+Adjust css （就改了下 css）
 ```
 
 它在许多场景中（例如多次 commit、多个更改和重构）非常有用，可以帮助审查人员理解提交者的想法。
@@ -258,7 +258,7 @@ See also: #456, #789
 
 它在很多情况下都很有用，例如：
 
-- 在很少或没有上下文（拼写错误、格式化、确实内容）的情况下减少 commit
+- 减少那些很少或没有上下文（拼写错误、格式化、缺失内容）的 commit
 - 将单独的更改连接在一起使它们更有意义
 - 重写 _还在开发_ 的 commit 
 
