@@ -411,7 +411,7 @@ https://whatthecommit.com/
 
 Todo tipo de ajuda é bem-vinda. Exemplos de tópicos em que você pode contribuir:
 
-- Correcões gramáticas e ortográficas
+- Correcões gramaticais e ortográficas
 - Tradução para novas línguas
 - Melhoras nas referências e fontes
 
