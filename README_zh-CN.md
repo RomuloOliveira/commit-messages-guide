@@ -38,12 +38,14 @@
 
 ```
 # Good
-Use InventoryBackendPool to retrieve inventory backend （用 InventoryBackendPool 获取库存）
+Use InventoryBackendPool to retrieve inventory backend
+用 InventoryBackendPool 获取库存
 ```
 
 ```
 # Bad
-Used InventoryBackendPool to retrieve inventory backend （InventoryBackendPool 被用于获取库存）
+Used InventoryBackendPool to retrieve inventory backend 
+InventoryBackendPool 被用于获取库存
 ```
 
 _不过为什么要使用祈使句呢？_
@@ -53,19 +55,22 @@ commit 信息描述的是引用的变更部分实际上**做**了什么，它的
 [Chris Beams 的这篇优秀的文章](https://chris.beams.io/posts/git-commit/)为我们提供了一些简单的句子，可以帮助我们用祈使句编写更好的 commit 信息：
 
 ```
-If applied, this commit will <commit message> （如获许可，此提交将会 <提交备注>）
+If applied, this commit will <commit message> 
+如获许可，此提交将会 <提交备注>
 ```
 
 例子：
 
 ```
 # Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend （如获许可，此提交将使用 InventoryBackendPool 获取库存）
+If applied, this commit will use InventoryBackendPool to retrieve inventory backend
+如获许可，此提交将使用 InventoryBackendPool 获取库存
 ```
 
 ```
 # Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend （如获许可，InventoryBackendPool 将会被用于获取库存）
+If applied, this commit will used InventoryBackendPool to retrieve inventory backend 
+如获许可，InventoryBackendPool 将会被用于获取库存
 ```
 
 ### 首字母大写
@@ -88,28 +93,32 @@ add `use` method to Credit model
 
 ```
 # Good
-Add `use` method to Credit model （为 Credit 模块添加 `use` 方法）
+Add `use` method to Credit model 
+为 Credit 模块添加 `use` 方法
 
 ```
 
 ```
 # Bad
-Add `use` method （添加 `use` 方法）
+Add `use` method 
+添加 `use` 方法
 ```
 
 ```
 # Good
-Increase left padding between textbox and layout frame （在 textbox 和 layout frame 之间添加向左对齐）
+Increase left padding between textbox and layout frame 
+在 textbox 和 layout frame 之间添加向左对齐
 ```
 
 ```
 # Bad
-Adjust css （就改了下 css）
+Adjust css 
+就改了下 css
 ```
 
 它在许多场景中（例如多次 commit、多个更改和重构）非常有用，可以帮助审查人员理解提交者的想法。
 
-### 使用信息本身来解释“为什么”、“如何”和其他的细节
+### 使用信息本身来解释“原因”、“目的”、“手段”和其他的细节
 
 ```
 # Good
@@ -143,9 +152,9 @@ setup a new attribute (in_use_amount) with a new value
 
 信息的主题和正文之间用空行隔开。其他空行被视为信息正文的一部分。
 
-像“-”、“*”和“\”的字符可以提高可读性。
+像“-”、“*”和“\”这样的字符可以提高可读性。
 
-### 避免使用通用的信息或没有上下文的信息
+### 避免使用无上下文的信息
 
 ```
 # Bad
@@ -160,7 +169,7 @@ Change stuff
 Adjust css
 ```
 
-### 限制列数
+### 限制每行字数
 
 [这里建议](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)主题最多使用50个字符，正文最多使用72个字符。
 
@@ -227,44 +236,44 @@ See also: #456, #789
 
 ## Rebase vs. Merge
 
-这部分是 Atlassian 的优秀教程——["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) 的精华。
+这部分是 Atlassian 的优秀教程(TL;DR)——["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) 的精华。
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
 ### Rebase
 
-**精华：** 将你的分支一个接一个地应用于基本分支上，生成一棵新树。
+**TL;DR:** 将你的分支逐个应用于基本分支，生成新树。
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
 ### Merge
 
-**精华：** 创建一个新的 commit，称为一个 _merge commit_（合并提交），其中包含了两个分支的差异。
+**TL;DR:** 创建一个新的 commit，称为 _merge commit_（合并提交），其具有两个分支之间的差异。
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
-### 为什么一些人更喜欢 rebase 而不是 merge？
+### 为什么一些人更喜欢 rebase 而非 merge？
 
 我特别喜欢 rebase 而不是 merge。原因有以下几点：
 
-* 它会产生一个“干净”的历史记录，没有不必要的合并的 commit。
-* _所见即所得_，即在代码审查中，所有的更改都来自于一个特定的、有标题的 commit，避免了在合并 commit 中隐藏的修改。
-* 提交者将解决更多的合并，而且每个合并的更改都在 commit 中，并带有适当的信息。
-    * 深入观察并审查合并的 commit 很不常见，因此避免它们可以确保所有更改都有一个属于它们的 commit。
+* 它的历史信息很"干净"，没有无用的合并 commit。
+* _所见即所得_，即在代码审查中，所有的更改都能在特定的、有标题的 commit 中找到，避免了隐藏在合并 commit 中的修改。
+* 通常 merge 是由提交者实行的，并会为每个转换成 commit 的 merge 书写准确的信息。
+    * 通常我们不会深挖和复查 merge commit，因此尽量避免使用 merge commit，并确保个变化点都有它们所属的 commit 。
 
 ### 什么时候 squash
 
-“Squashing” 是将一系列提交压缩成一个提交的过程，
+“Squashing” 是将一系列 commit 压缩成一个的过程。
 
-它在很多情况下都很有用，例如：
+它在某些情况下很有用，例如：
 
-- 减少那些很少或没有上下文（拼写错误、格式化、缺失内容）的 commit
-- 将单独的更改连接在一起使它们更有意义
-- 重写 _还在开发_ 的 commit 
+- 减少那些很少甚至没有上下文（拼写错误、格式化、缺失内容）的 commit
+- 将单独的更改连接在一起使它们更通俗易懂
+- 重写 _work in progress_ 的 commit 
 
-### 什么时候避免 rebase 或 squash？
+### 什么时候避免 rebase 或 squash
 
-在多人开发的公共 commit 或共享分支上避免 rebase 和 squash。rebase 和 squash 会重写历史和现有的 commit，在共享分支的 commit（即推送到远程仓库或来自其他分支的 commit）可能会导致混乱，而且由于有分支的树和冲突人们可能会失去他们（本地和远程）的更改。
+避免在多人共同开发的公共 commit 或共享分支上使用 rebase 和 squash。rebase 和 squash 会改写历史记录并覆盖当前 commit，在共享分支的 commit（即推送到远程仓库或来自其他分支的 commit）上执行这些操作可能会引起混乱，由于分支产生分歧及冲突，合作者可能会因此失去他们（本地和远程）的更改。
 
 ## 有用的 git 命令
 
@@ -328,7 +337,7 @@ $ git cherry-pick 790ab21
 
 ### add/checkout/reset [--patch | -p]
 
-假设我们有以下差异：
+假设我们有以下冲突：
 
 ```diff
 diff --git a/README.md b/README.md
@@ -357,7 +366,7 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-我们可以使用 `git add -p` 只添加我们想要的补丁，而不需要更改已经编写的代码。
+我们可以使用 `git add -p` 只添加我们想要的补丁，而无需更改已有代码。
 它在将一个大的更改分解为小的 commit 或 reset/checkout 特定的更改时很有用。
 
 ```
@@ -414,11 +423,11 @@ https://whatthecommit.com/
 
 ## 喜欢它吗？
 
-[Say thanks!](https://saythanks.io/to/RomuloOliveira)
+[点赞！](https://saythanks.io/to/RomuloOliveira)
 
 ## 贡献
 
-感谢任何形式的帮助。一些你能帮助我的例子：
+感谢任何形式的帮助。例如：
 
 - 语法和拼写的纠正
 - 翻译成其他语言
