@@ -205,30 +205,26 @@ cdcdcd Agora vai
 这是一个模板，最初由 [Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 编写，出现在 [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) 中。
 
 ```
-Summarize changes in around 50 characters or less
+用最多50个字符总结更改
 
-More detailed explanatory text, if necessary. Wrap it to about 72
-characters or so. In some contexts, the first line is treated as the
-subject of the commit and the rest of the text as the body. The
-blank line separating the summary from the body is critical (unless
-you omit the body entirely); various tools like `log`, `shortlog`
-and `rebase` can get confused if you run the two together.
+如有必要，提供更详细的说明文本。将它包装成大约72个字符。
+在某些上下文中，第一行作为 commit 的主题，其余的文本作为主体。
+分隔摘要和正文的空白行非常重要(除非完全省略正文);
+如果同时运行“log”、“shortlog”和“rebase”等工具，可能会混淆。
 
-Explain the problem that this commit is solving. Focus on why you
-are making this change as opposed to how (the code explains that).
-Are there side effects or other unintuitive consequences of this
-change? Here's the place to explain them.
+解释当前 commit 正在解决的问题。
+关注你为什么所做的更改与(代码解释的)方式相反。
+是否有副作用或其他不直观的后果更改？ 
+这是解释它们的地方。
 
-Further paragraphs come after blank lines.
+接下来的段落在空行之后。
 
- - Bullet points are okay, too
+ - 也可以是要点。
 
- - Typically a hyphen or asterisk is used for the bullet, preceded
-   by a single space, with blank lines in between, but conventions
-   vary here
+ - 通常使用连字符或星号作为项目符号，前面有一个空格，
+   中间有空行，但约定在这里有所不同。
 
-If you use an issue tracker, put references to them at the bottom,
-like this:
+如果你使用问题跟踪器，请将对它们的引用放在底部，如下所示:
 
 Resolves: #123
 See also: #456, #789
