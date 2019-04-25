@@ -1,4 +1,4 @@
-# Руководство по работе с коммитами
+# Руководство по написанию коммитов
 
 [![Скажи спасибо!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
