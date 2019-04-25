@@ -8,9 +8,11 @@
 
 ## 可用语言
 
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
+- [英语](README.md)
+- [葡萄牙语](README_pt-BR.md)
+- [德语](README_de-DE.md)
+- [西班牙语](README_es-AR.md)
+- [意大利语](README_it-IT.md)
 - [简体中文](README_zh-CN.md)
 
 ## 什么是“commit”？
@@ -202,27 +204,26 @@ cdcdcd Agora vai
 
 ### 模板
 
-这是一个模板，最初由 [Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 编写，出现在 [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) 中。
+下面是参考模板，最初由 [Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 编写，出现在 [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) 中。
 
 ```
-用最多50个字符总结更改
+用 50 左右或更少的字符描述更改
 
-如有必要，提供更详细的说明文本。将它包装成大约72个字符。
-在某些上下文中，第一行作为 commit 的主题，其余的文本作为主体。
-分隔摘要和正文的空白行非常重要(除非完全省略正文);
-如果同时运行“log”、“shortlog”和“rebase”等工具，可能会混淆。
+如有必要，可提供更详细的补充说明，并尽可能将其限定在每行 72 个字符左右。
+在某些情况下，第一行被视为 commit 的主题，文本其余部分被作为正文。
+因此，将主题从正文分割出来的空白行就显得至关重要(除非完全省略正文)。
+如若不然，在使用命令行，如 “log”，“shortlog” 以及 “rebase” 的时候，将会很容易混淆。
 
-解释当前 commit 正在解决的问题。
-关注你为什么所做的更改与(代码解释的)方式相反。
-是否有副作用或其他不直观的后果更改？ 
-这是解释它们的地方。
+解释当前 commit 所解决的问题。
+请重点描述产生此更改的原因，而非手段（代码解释了一切）。
+是否存在副作用以及其他不直观的影响？
+请在这里将其解释清楚。
 
-接下来的段落在空行之后。
+接下来请另起一行。
 
- - 也可以是要点。
+ - 也可以使用列举要点的格式。
 
- - 通常使用连字符或星号作为项目符号，前面有一个空格，
-   中间有空行，但约定在这里有所不同。
+ - 通常使用连字符(-)或星号(*)作为要点段落标记，标记与文本之间留一空格，各要点之间留一空行。但这取决于你们的约定。
 
 如果你使用问题跟踪器，请将对它们的引用放在底部，如下所示:
 
@@ -432,8 +433,8 @@ https://whatthecommit.com/
 
 ## 灵感、来源以及扩展阅读
 
-- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
-- [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
-- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-- [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
-- [Pro Git Book - Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+- [如何编写 Git Commit Message](https://chris.beams.io/posts/git-commit/)
+- [Pro Git Book - Commit 指南](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
+- [关于 Git Commit Messages 的说明](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+- [合并与变基](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- [Pro Git Book - 改写历史](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
