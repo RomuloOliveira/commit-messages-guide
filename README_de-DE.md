@@ -2,19 +2,19 @@
 
 [![Sag danke!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
-Ein Leitfaden um die Wichtigkeit von Commit-Messages zu verstehen und diese richtig zu formulieren.
+Ein Leitfaden, um die Wichtigkeit von Commit-Messages zu verstehen und diese richtig zu formulieren.
 
-Verstehe was ein Commit ist, warum es wichtig ist eine gute Commit-Message zu schreiben, Best-Practices und ein paar Tipps um eine saubere Commit-Historie zu planen oder vielleicht sogar nachträglich noch anzupassen.
+Verstehe was ein Commit ist, warum es wichtig ist, eine gute Commit-Message zu schreiben, gute Praxis und ein paar Tipps, um eine saubere Commit-Historie zu planen oder vielleicht sogar nachträglich noch anzupassen.
 
 #### Hinweis des Übersetzers
 
-Auch wenn das eine Übersetzung darstellen soll, empfiehlt es sich, alle Commit-Messages auf Englisch zu schreiben, deshalb sind die Beispiele nicht übersetzt.
+Auch wenn dies eine Übersetzung darstellen soll, empfiehlt es sich, alle Commit-Messages auf Englisch zu schreiben, deshalb sind die Beispiele nicht übersetzt.
 
 ## Was ist ein "Commit"?
 
 Ganz einfach beschrieben ist ein Commit eine Art _Schnappschuss_ deiner lokalen Dateien in deinem Repository (dein Projektordner).
-Im Gegensatz zur geläufigen Annahme [speichert Git nicht nur die Unterschiede in den Dateien sonder immer die gesamte Datei (Quelle auf Englisch)](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
-Für Dateien die sich von einem auf den anderen Commit nicht geändert haben, speichert Git lediglich einen Link zur einer bereits gespeicherten Version in einem vorangegangenen Commit.
+Im Gegensatz zur geläufigen Annahme [speichert Git nicht nur die Unterschiede in den Dateien, sondern immer die gesamte Datei (Quelle auf Englisch)](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Für Dateien, die sich von einem auf den anderen Commit nicht geändert haben, speichert Git lediglich einen Link zur einer bereits gespeicherten Version in einem vorangegangenen Commit.
 
 Die folgende Grafik zeigt wie Git die Daten mit der Zeit speichert. Jede "Version" meint hier einen Commit.
 
@@ -24,14 +24,14 @@ Die folgende Grafik zeigt wie Git die Daten mit der Zeit speichert. Jede "Versio
 
 - Um Code-Reviews zu beschleunigen und zu vereinfachen
 - Um die erzielte Änderung besser verstehen zu können
-- Um _die_ Gründe zu erläutern die so nicht aus dem Code hervorgehen (Grundsatzentscheidungen)
-- Um zukünftigen Entwicklern zu helfen zu verstehen wie und warum Änderungen gemacht wurden – was die Fehlersuche und -behebung vereinfacht
+- Um _die_ Gründe zu erläutern, die so nicht aus dem Code hervorgehen (Grundsatzentscheidungen)
+- Um zukünftigen Entwicklern zu helfen, zu verstehen, wie und warum Änderungen gemacht wurden – was die Fehlersuche und -behebung vereinfacht
 
 Um diese und noch mehr Vorteile möglichst effizient nutzen zu können, sollten wir uns an die folgenden Praktiken und Standards halten.
 
 ## Praktiken
 
-Dies sind Praktiken aus meiner eigenen Erfahrung sowie aus anderen Artikeln/Guides aus dem Internet. Wenn du noch mehr Tipps hast oder manche dieser Praktiken für nicht sinnvoll hältst, beantrage gerne eine Änderung via Pull Request.
+Dies sind Praktiken aus meiner eigenen Erfahrung, sowie aus anderen Artikeln/Anleitungen aus dem Internet. Wenn du noch mehr Tipps hast oder manche dieser Praktiken für nicht sinnvoll hältst, beantrage gerne eine Änderung via Pull Request.
 
 ### Imperativ verwenden
 
@@ -108,7 +108,7 @@ Increase left padding between textbox and layout frame
 Adjust css
 ```
 
-Dies ist in vielen Situationen (z.B.: mehrer kleine Commits, Refactoring) sinnvoll um besser zu verstehen, was sich der Entwickler gedacht hat.
+Dies ist in vielen Situationen (z.B.: mehrere kleine Commits, Refactoring) sinnvoll, um besser zu verstehen, was sich der Entwickler gedacht hat.
 
 ### "Warum", "Wozu", "Wie" und andere Details gehören in die Beschreibung der Commit-Message
 
@@ -161,13 +161,13 @@ Change stuff
 Adjust css
 ```
 
-### Limitiere die Länge Commit-Message
+### Limitiere die Länge der Commit-Message
 
 [Es wird empfohlen (Quelle in ENG)](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) maximal 50 Zeichen für den Titel/Betreff und 72 Zeichen für die Nachricht zu verwenden.
 
 ### Bleibe in einer Sprache
 
-Dies gilt vor allem für Entwickler für die Englisch nicht die Muttersprache ist. Logischerweise sollte man sich immer dem etablierten Standard anpassen – ganz besonders bei Repositories mit Entwicklern aus vielen verschiedenen Ländern.
+Dies gilt vor allem für Entwickler, für die Englisch nicht die Muttersprache ist. Logischerweise sollte man sich immer dem etablierten Standard anpassen – ganz besonders bei Repositories mit Entwicklern aus vielen verschiedenen Ländern.
 
 Entscheide dich für eine Sprache und bleibe dabei.
 
@@ -251,30 +251,30 @@ Ich persönlich bevorzuge rebase. Gründe dafür sind unter anderem:
 * Es entsteht eine "saubere" Historie, ohne unnötige Merge-Commits.
 
 * _What you see is what you get_, z.B.: in eine Code-Review sieht man wirklich jeden Commit. Es sind keine Änderungen in Merge-Commits versteckt.
-* Jedes Zusammenführen von Code geschiet einzeln durch den Entwickler, so hat jeder Merge einen eigenen Commit mit einer entsprechenen Commit-Message.
+* Jedes Zusammenführen von Code geschieht einzeln durch den Entwickler, so hat jeder Merge einen eigenen Commit mit einer entsprechenen Commit-Message.
     * Im Normalfall werden Merge-Commits in einer Code-Review nicht betrachtet. Hat jede Änderung/Zusammenführung einen eigenen Commit, kann man sicher sein, dass alles an der richtigen Stelle ist und betrachtet werden kann.
 
 ### Wann benutzt man squash
 
-Squash beschreibt eine Methode in der eine Reihe von Commits in einen einzelnen Commit zusammengefasst werden.
+Squash beschreibt eine Methode in der eine Reihe von Commits in einem einzelnen Commit zusammengefasst werden.
 
 Hilfreich bei z.B.:
 
 - dem Reduzieren von kleinen/kontextlosen Commits (Rechtschreibfehler, Formatierung, vergessene Änderungen)
-- dem Zusammenführen mehrere Commits die als Ganzes mehr Sinn ergeben
+- dem Zusammenführen mehrerer Commits, die als Ganzes mehr Sinn ergeben
 - dem Neu-Verpacken von _work in progress_ Commits
 
 ### Wann sollte man rebase bzw. squash vermeiden
 
 Vermeiden Sie die Verwendung von Rebase und Squash in öffentlichen Commits oder in Branches, in denen mehrere Personen arbeiten.
 
-Rebase und Squash verändern die Historie der Commits und überschreiben bestehende Commits. Verwendet man rebase und squash auf Commits, die sich auf einen gemeinsam genutzten Branch befinden (d.h. Commits, die in ein Remote Repository verschoben wurden oder von anderen Branches stammen), erzeugt man unötige Verwirrung. Darüber hinaus besteht die Gefahr, dass Andere ihre Änderungen (sowohl lokal als auch auf dem Remote) verlieren, aufgrund von unterschiedlichen Trees und anderen Konflikten.
+Rebase und Squash verändern die Historie der Commits und überschreiben bestehende Commits. Verwendet man rebase und squash auf Commits, die sich auf einen gemeinsam genutzten Branch befinden (d.h. Commits, die in ein Remote-Repository verschoben wurden oder von anderen Branches stammen), erzeugt man unötige Verwirrung. Darüber hinaus besteht die Gefahr, dass Andere ihre Änderungen (sowohl lokal als auch auf dem Remote) verlieren, aufgrund von unterschiedlichen Trees und anderen Konflikten.
 
 ## Hilfreiche Git Kommandos
 
 ### rebase -i
 
-Wird verwenet um Commits zu squashen, Commit-Messages zu bearbeiten, Neuschreiben/Löschen/Neuordnen von Commits, usw.
+Wird verwendet, um Commits zu squashen, Commit-Messages zu bearbeiten, Neuschreiben/Löschen/Neuordnen von Commits, usw.
 
 ```
 pick 002a7cc Improve description and update document title
@@ -315,12 +315,12 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 ### fixup
 
-Wird verwendet um Commits einfach anzupassen ohne einen komplexen Rebase durchzuführen.
+Wird verwendet, um Commits einfach anzupassen ohne ein komplexes Rebase durchzuführen.
 [Dieser Artikel (Quelle auf Englisch)](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) beschreibt mit Beispielen wie und wann man einen fixup durchführt.
 
 ### cherry-pick
 
-Sehr hilfreich wenn man einen Commit der z.B.: versehentlich im falschen Branch gepusht wurde auf den richtigen Branch anwenden will ohne diesen neuschreiben zu müssen.
+Sehr hilfreich, wenn man einen Commit der z.B. versehentlich im falschen Branch gepusht wurde, auf den richtigen Branch anwenden will, ohne diesen neuschreiben zu müssen.
 
 Beispiel:
 
@@ -362,7 +362,7 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-Mit `git add -p` können wir nun ausschließlich die gewünschten Abschnitte zum Commit hinzufügen, ganz ohne dass wir bestehenden Code ändern müssen. Das ist hilfreich um größere Änderungen in mehrere kleine Commits aufzuteilen oder um ungewollte Änderungen gezielt rückgängig zu machen.
+Mit `git add -p` können wir nun ausschließlich die gewünschten Abschnitte zum Commit hinzufügen, ganz ohne dass wir bestehenden Code ändern müssen. Das ist hilfreich, um größere Änderungen in mehrere kleine Commits aufzuteilen oder um ungewollte Änderungen gezielt rückgängig zu machen.
 
 ```
 Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]? s
