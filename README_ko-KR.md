@@ -4,7 +4,7 @@
 
 커밋 메시지의 중요성을 이해하고 어떻게 하면 잘 작성할 수 있는지에 대해 설명하는 안내서입니다.
 
-커밋 메시지가 무엇이며, 왜 잘 작성하는 것이 중요한지 알아보고 좋은 커밋 히스토리를 유지하고 싶을 때 적용할 수 있는 최고의 접근법과 몇가지 유용한 팁을 배워봅시다.
+커밋 메시지가 무엇이며, 왜 잘 작성하는 것이 중요한지 알아보고 좋은 커밋 히스토리를 유지하고 싶을 때 적용할 수 있는 최고의 접근법과 몇 가지 유용한 팁을 배워봅시다.
 
 ## 다른 언어로 보기
 
@@ -42,14 +42,14 @@
 
 ```
 # 좋음
-InventoryBackendPool을 사용하여 재고 백엔드 검색합니다
+InventoryBackendPool을 사용하여 재고 백엔드를 검색합니다
 ---
 Use InventoryBackendPool to retrieve inventory backend
 ```
 
 ```
 # 나쁨
-재고 백엔드 검색을 위해 InventoryBackendPool 사용함
+InventoryBackendPool을 사용하여 재고 백엔드를 검색했습니다
 ---
 Used InventoryBackendPool to retrieve inventory backend
 ```
@@ -58,10 +58,10 @@ _근데 왜 명령조를 쓰나요?_
 
 커밋 메시지는 무엇이 변경되었는지가 아니라 실제로 그 변경 사항이 미치는 영향, 즉 변경 사항이 실질적으로 무엇을 하는지 설명합니다.
 
-[이 Chris Beams이 작성한 멋진 글](https://chris.beams.io/posts/git-commit/)이 더 나은 커밋 메시지를 명령조로 작성할 때 사용할 수 있는 간단한 문장 하나를 제시합니다:
+[Chris Beams이 작성한 이 멋진 글](https://chris.beams.io/posts/git-commit/)이 더 나은 커밋 메시지를 명령조로 작성할 때 사용할 수 있는 간단한 문장 하나를 제시합니다:
 
 ```
-적용시, 이 커밋은 <커밋 메시지> 합니다
+적용 시, 이 커밋은 <커밋 메시지> 합니다
 ---
 If applied, this commit will <commit message>
 ```
@@ -70,14 +70,14 @@ If applied, this commit will <commit message>
 
 ```
 # 좋음
-적용시, 이 커밋은 InventoryBackendPool을 사용하여 재고 백엔드를 검색합니다
+적용 시, InventoryBackendPool을 사용하여 재고 백엔드를 검색합니다
 ---
 If applied, this commit will use InventoryBackendPool to retrieve inventory backend
 ```
 
 ```
 # 나쁨
-적용시, 이 커밋은 재고 백엔드 검색을 위해 InventoryBackendPool 사용함
+적용 시, InventoryBackendPool을 사용하여 재고 백엔드를 검색했습니다
 ---
 If applied, this commit will used InventoryBackendPool to retrieve inventory backend
 ```
@@ -96,7 +96,7 @@ add `use` method to Credit model
 
 첫 문자를 대문자로 작성해야 하는 이유는 문장의 시작 부분에 대문자를 사용하는 문법 규칙을 따르기 위함입니다.
 이런 실질적인 규칙의 사용상은 사람, 팀 그리고 언어마다 다를 수 있습니다.
-대문자로 시작하건 아니건, 중요한 것은 하나의 표준을 만들어 계속 따르는 것 입니다.
+대문자로 시작하건 아니건, 중요한 것은 하나의 표준을 만들어 계속 따르는 것입니다.
 
 _역주:_ 한국어는 크게 영향이 없을 듯 합니다.
 
@@ -118,7 +118,7 @@ Add `use` method
 
 ```
 # 좋음
-텍스트상자와 레이아웃 프레임 사이 왼쪽 간격 늘림
+텍스트 상자와 레이아웃 프레임 사이 왼쪽 간격 늘림
 ---
 Increase left padding between textbox and layout frame
 ```
@@ -130,7 +130,7 @@ CSS 조정
 Adjust css
 ```
 
-이는 다양한 상황 (e.g. 다중 커밋, 서로 다른 변경 사항 그리고 리펙토링)에서 코드 리뷰를 진행하는 사람이 커밋 작성자가 무슨 생각을 하고 있었는지 쉽게 이해할 수 있도록 도움을 줄 수 있습니다.
+이는 다양한 상황 (e.g. 다중 커밋, 서로 다른 변경 사항 그리고 리팩토링)에서 코드 리뷰를 진행하는 사람이 커밋 작성자가 무슨 생각을 하고 있었는지 쉽게 이해할 수 있도록 도움을 줄 수 있습니다.
 
 ### 커밋 메시지 본문으로 "왜", "무엇을 위해", "어떻게" 변경했는지와 상세 내용 추가 설명하기
 
@@ -140,7 +140,7 @@ InventoryBackend 자식 클래스의 메소드 이름 수정
 
 InventoryBackend를 상속받는 클래스가 기반 클래스의 인터페이스를 따르지 않음.
 
-카트가 잘못된 방식으로 백엔드 구현을 호출하고 있었기 때문에 문제가 없었음.
+Cart가 잘못된 방식으로 백엔드 구현을 호출하고 있었기 때문에 문제가 없었음.
 ---
 Fix method name of InventoryBackend child classes
 
@@ -153,13 +153,13 @@ incorrectly.
 
 ```
 # 좋음
-Cart의 credit을 JSON으로 (역)직렬화
+Cart에서 credit을 json으로 직렬화 및 역직렬화합니다
 
-Credit 객체를 딕셔너리로 전환하는데 두가지 이유가 있습니다:
+Credit 객체를 딕셔너리로 전환하는데 두 가지 이유가 있습니다:
 
   - Pickle이 클래스의 파일 경로에 의존하기 때문에
     리팩토링시 로직이 망가질 수 있습니다
-  - 딕셔너리와 빌트인 타입이 기본적으로 pickleable 합니다
+  - 딕셔너리와 빌트인 타입은 기본적으로 pickle 모듈에 의해 직렬화가 가능합니다
 ---
 Serialize and deserialize credits to json in Cart
 
@@ -232,7 +232,7 @@ bebebe Fix method name of InventoryBackend child classes
 ```
 # 좋음 (한국어 예시)
 ababab Credit 모델에 `use` 메소드 추가
-efefef InventoryBackendPool을 사용하여 재고 백엔드 검색합니다
+efefef InventoryBackendPool을 사용하여 재고 백엔드를 검색합니다
 bebebe InventoryBackend 자식 클래스의 메소드 이름 수정
 ```
 
