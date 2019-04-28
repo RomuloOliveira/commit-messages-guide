@@ -153,12 +153,11 @@ incorrectly.
 
 ```
 # 좋음
-Cart에서 credit을 json으로 직렬화 및 역직렬화합니다
+Credits을 cart의 json에 직렬화 및 역직렬화합니다
 
 Credit 객체를 딕셔너리로 전환하는데 두 가지 이유가 있습니다:
 
-  - Pickle이 클래스의 파일 경로에 의존하기 때문에
-    리팩토링시 로직이 망가질 수 있습니다
+  - Pickle이 클래스의 파일 경로에 의존하기 때문에 리팩토링시 로직이 망가질 수 있습니다
   - 딕셔너리와 빌트인 타입은 기본적으로 pickle 모듈에 의해 직렬화가 가능합니다
 ---
 Serialize and deserialize credits to json in Cart
@@ -267,7 +266,7 @@ cdcdcd 이제 잘 작동할거임
  - 하이픈(-) 또는 별(*)이 주로 강조점으로 사용되고 이후 단일 공백(space)을 삽입합니다
    강조점 사이에는 공백 행을 넣지만 규칙은 언제든지 바꿀 수 있습니다
 
-이슈 트레커를 사용한다면 다음과 같이 레퍼런스를 메시지 하단에 삽입하세요:
+이슈 트래커를 사용한다면 다음과 같이 레퍼런스를 메시지 하단에 삽입하세요:
 
 이슈: #123
 같이보기: #456, #789
@@ -294,19 +293,19 @@ See also: #456, #789
 
 ## 재정렬 (Rebase) vs. 병합 (Merge)
 
-이 섹션은 Atlassian의 멋진 튜토리얼 ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) 의 **길어서 안 읽음 요약좀 (TL;DR)** 버전입니다.
+이 섹션은 Atlassian의 멋진 튜토리얼 ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) 의 **길어서 안 읽음 요약 좀 (TL;DR)** 버전입니다.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
 ### 재정렬 (Rebase)
 
-**한줄요약:** 기반 브랜치부터 작업 브랜치의 커밋을 하나씩 차곡차곡 이어붙여 새로운 트리를 만듭니다.
+**한 줄 요약:** 기반 브랜치부터 작업 브랜치의 커밋을 하나씩 차곡차곡 이어붙여 새로운 트리를 만듭니다.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
 ### 병합 (Merge)
 
-**한줄요약:** 두 브랜치의 변경 사항을 하나로 합쳐 (적절히) _병합된 커밋_ 이라 적힌 하나의 새 커밋을 만듭니다.
+**한 줄 요약:** 두 브랜치의 변경 사항을 하나로 합쳐 (적절히) _병합된 커밋_ 이라 적힌 하나의 새 커밋을 만듭니다.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
