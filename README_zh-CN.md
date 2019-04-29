@@ -8,11 +8,12 @@
 
 ## 可用语言
 
-- [英语](README.md)
-- [葡萄牙语](README_pt-BR.md)
-- [德语](README_de-DE.md)
-- [西班牙语](README_es-AR.md)
-- [意大利语](README_it-IT.md)
+- [English](README.md)
+- [Português](README_pt-BR.md)
+- [Deutsch](README_de-DE.md)
+- [Español](README_es-AR.md)
+- [Italiano](README_it-IT.md)
+- [Russian](README_ru-RU.md)
 - [简体中文](README_zh-CN.md)
 
 ## 什么是“commit”？
