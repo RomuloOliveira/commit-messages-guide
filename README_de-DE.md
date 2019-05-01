@@ -422,7 +422,8 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 
 ## Sonstiges Interessantes
 
-https://whatthecommit.com/
+- https://whatthecommit.com/
+- https://gitmoji.carloscuesta.me/
 
 ## Hat es dir gefallen?
 

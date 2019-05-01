@@ -478,7 +478,8 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 
 ## 다른 흥미로운 것들
 
-https://whatthecommit.com/
+- https://whatthecommit.com/
+- https://gitmoji.carloscuesta.me/
 
 ## 맘에 들어요?
 
