@@ -6,15 +6,6 @@
 
 커밋 메시지가 무엇이며, 왜 잘 작성하는 것이 중요한지 알아보고 좋은 커밋 히스토리를 유지하고 싶을 때 적용할 수 있는 최고의 접근법과 몇 가지 유용한 팁을 배워봅시다.
 
-## 다른 언어로 보기
-
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Español](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-- [Korean](README_ko-KR.md)
-
 ## "commit" 이 무엇인가요?
 
 간단히 말해서, "커밋 (commit)" 은 로컬 저장소에 쓰여지는 로컬 파일들의 단편본입니다.

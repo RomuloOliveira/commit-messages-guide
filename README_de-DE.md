@@ -10,14 +10,6 @@ Verstehe was ein Commit ist, warum es wichtig ist eine gute Commit-Message zu sc
 
 Auch wenn das eine Übersetzung darstellen soll, empfiehlt es sich, alle Commit-Messages auf Englisch zu schreiben, deshalb sind die Beispiele nicht übersetzt.
 
-## Verfügbare Sprachen
-
-- [Englisch](README.md)
-- [Portugiesisch](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Spanische](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-
 ## Was ist ein "Commit"?
 
 Ganz einfach beschrieben ist ein Commit eine Art _Schnappschuss_ deiner lokalen Dateien in deinem Repository (dein Projektordner).
