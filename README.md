@@ -13,8 +13,8 @@ It may help you to learn what a commit is, why it is important to write good mes
 - [Deutsch](README_de-DE.md)
 - [Español](README_es-AR.md)
 - [Italiano](README_it-IT.md)
-- [Russian](README_ru-RU.md)
-- [Korean](README_ko-KR.md)
+- [한국어](README_ko-KR.md)
+- [Русский](README_ru-RU.md)
 
 ## What is a "commit"?
 
