@@ -8,14 +8,6 @@ Pode te ajudar a aprender o que é um _commit_, entender porque é importante es
 
 **Observações:** Apesar da versão em português ter sido escrita antes da versão em inglês, a versão inglês contém alguns textos que estão mais detalhados, assim como melhor referenciamento de fontes.
 
-## Linguagens disponíveis
-
-- [Inglês](README.md)
-- [Português](README_pt-BR.md)
-- [Alemão](README_de-DE.md)
-- [Espanhol](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-
 ## O que é um "_commit_"?
 
 Em termos simples, o **_commit_** é uma espécie de _snapshot_ dos seus arquivos locais gravado localmente no seu repositório. Ao contrário do que se pensa, o git *não* armazena apenas as diferenças e sim a cópia completa dos arquivos.

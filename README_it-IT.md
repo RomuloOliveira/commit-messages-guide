@@ -6,13 +6,6 @@ Una guida per capire l'importanza dei messaggi di commit e come scriverli bene.
 
 Potrebbe aiutarti a capire cos'è un commit, perché è importante scrivere buoni messaggi, buone pratiche e alcuni consigli per pianificare e (ri)scrivere una buona storia per i commit.
 
-## Lingue disponibili
-
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Italiano](README_it-IT.md)
-
 ## Cos'è un "commit"?
 
 In termini semplici, un commit è una _fotografia_ dei file locali, scritti nel repository locale.
