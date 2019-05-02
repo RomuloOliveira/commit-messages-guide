@@ -321,7 +321,7 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 #### fixup
 
-コミットを簡単に、もっと複雑なリベースを必要とせずに、クリーンナップするのを使います。
+もっと複雑なリベースを必要とせず、簡単にコミットを綺麗にするために使います。
 [この記事](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html)はどのように、どういう時に使うべきかのとても良い例を示しています。
 
 ### cherry-pick
