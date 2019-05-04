@@ -6,16 +6,6 @@
 
 它可以帮助你了解什么是 commit、为什么编写好的信息很重要、最好的实践案例以及一些技巧来计划和（重新）编写良好的 commit 历史。
 
-## 可用语言
-
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Español](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-- [Russian](README_ru-RU.md)
-- [简体中文](README_zh-CN.md)
-
 ## 什么是“commit”？
 
 简单来讲，commit 就是在本地存储库中编写的文件的 _快照_。与印象中不同的是，[git 不仅存储不同版本文件之间的差异，还存储了所有文件的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。对于两个 commit 之间没有被修改的文件，git 只存储指向前一个完全相同的文件的链接。
