@@ -6,18 +6,6 @@ Hướng dẫn này giúp ta hiểu được tầm quan trọng của commit mes
 
 Nó giúp bạn biết được commit là gì, tại sao viết một message thì quan trọng, các ví dụ thực tiễn và vài mẹo để lập kế hoạch và viết lại một commit history tốt.
 
-# Ngôn ngữ có sẵn
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Español](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-- [한국어](README_ko-KR.md)
-- [Русский](README_ru-RU.md)
-- [简体中文](README_zh-CN.md)
-- [日本語](README_ja-JP.md)
-- [Vietnamese](README_vi-VN.md)
-
 # "Commit" là gì?
 
 Nói một cách đơn giản, commit là một snapshot của các local file, được viết trong local repository.
@@ -55,7 +43,7 @@ Used InventoryBackendPool to retrieve inventory backend
 
 _Nhưng tại sao lại dùng câu mệnh lệnh_
 
-Một commit message mô tả những cái thay đổi được tham chiếu đến việc thực hiện ở hiện tại, những tác động của nó, chứ không phải những cái đã được thực hiện.
+Một commit message mô tả những cái thay đổi được tham chiếu đến việc **thực hiện ở hiện tại**, những tác động của nó, chứ không phải những cái đã được thực hiện.
 
 [Bài viết tuyệt vời này đến từ Chris Beams](https://chris.beams.io/posts/git-commit/) cung cấp cho chúng ta một câu đơn giản có thể được sử dụng để giúp chúng ta viết commit message tốt hơn ở dạng mệnh lệnh:
 
