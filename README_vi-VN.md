@@ -12,8 +12,10 @@ Nó giúp bạn biết được commit là gì, tại sao viết một message t
 - [Deutsch](README_de-DE.md)
 - [Español](README_es-AR.md)
 - [Italiano](README_it-IT.md)
-- [Russian](README_ru-RU.md)
-- [Korean](README_ko-KR.md)
+- [한국어](README_ko-KR.md)
+- [Русский](README_ru-RU.md)
+- [简体中文](README_zh-CN.md)
+- [日本語](README_ja-JP.md)
 - [Vietnamese](README_vi-VN.md)
 
 # "Commit" là gì?
