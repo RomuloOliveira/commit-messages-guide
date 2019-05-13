@@ -6,8 +6,6 @@
 
 Ở bài hướng dẫn này, bạn sẽ hiểu commit là gì, tầm quan trọng của việc viết message tốt cho commit của bạn, những cách thực hành tốt nhất, một số mẹo để lên kế hoạch viết commit và viết/viết lại một lịch sử commit cho tốt.
 
-## Available languages
-
 ## "Commit" là gì?
 
 Hãy nghĩ đơn giản, một commit là một _ảnh_ (hoặc bản sao) của những file cục bộ trên kho lưu trữ cá nhân của bạn.
@@ -25,7 +23,7 @@ Hình sau mô tả cách mà git lưu trữ dữ liệu theo thời gian, trong 
 - Để giải thích lý do "tại sao" chỉ giải thích bằng code là chưa đủ mà còn phải thêm bằng message.  
 - Để sau này, những người bảo trì project có thể tìm ra lý do tại sao lại có những thay đổi và chúng được thực hiện như thế nào, điều này làm cho việc khắc phục sự cố cũng như gở lỗi trở nên dễ dàng hơn.
 
-Để hiểu thêm về những điểm trên, chúng ta có thể sử dụng các good practices(tạm hiểu là những cách làm tốt, được rút ra từ kinh nghiệm, Tiếng Việt không có từ ngữ tương ứng nên người dịch sẽ giữ nguyên từ này) và những tiêu chuẩn được mô tả bên dưới.
+Để hiểu thêm về những điểm trên, chúng ta có thể sử dụng các good practices(tạm hiểu là những cách làm tốt, được rút ra từ kinh nghiệm, Tiếng Việt không có từ ngữ tương ứng nên người dịch sẽ giữ nguyên từ này) và những tiêu chuẩn được mô tả bên dưới.ví dụ điển hình
 
 ## Good Practices
 
