@@ -1,8 +1,8 @@
-# Hướng dẫn commit message
+# Hướng dẫn viết nội dung commit
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
-Hướng dẫn này giúp ta hiểu được tầm quan trọng của commit message và cách viết chúng.
+Hướng dẫn này giúp ta hiểu được tầm quang trọng của việc viết nội dung commit tốt.
 
 Nó giúp bạn biết được commit là gì, tại sao viết một message thì quan trọng, các ví dụ thực tiễn và vài mẹo để lập kế hoạch và viết lại một commit history tốt.
 
@@ -20,7 +20,7 @@ Hình ảnh bên dưới cho thấy cách git lưu trữ dữ liệu theo thời
 
 - Để tăng tốc và hợp lý hóa các code review
 - Để giúp hiểu về sự thay đổi
-- Để giải thích "the whys", cái mà không thể được mô tả chỉ bằng code
+- Để giải thích lí do sự thay đổi, cái mà không thể diễn tả được chỉ bằng code
 - Để giúp các maintainer trong tương lai tìm ra lý do và cách thức các thay đổi được thực hiện, giúp khắc phục sự cố và debug dễ dàng hơn
 
 Để tối đa hóa các kết quả đó, chúng ta có thể sử dụng một số ví dụ thực tiễn được mô tả trong phần tiếp theo.
@@ -230,7 +230,7 @@ Phần này là một phần trong các hướng dẫn của Atlassian, ["Mergin
 
 ### Rebase
 
-Apply các commit trong branch của bạn, từng cái một, vào sau branch cơ sở, tạo ra một tree mới.
+Apply có thể dịch là thêm hoặc là chấp nhận, từng cái một, vào sau branch cơ sở, tạo ra một tree mới.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
@@ -314,7 +314,7 @@ Sử dụng nó để dọn dẹp các commit dễ dàng hơn và không cần m
 
 ### cherry-pick
 
-Nó rất hữu ích để apply commit mà bạn đã thực hiện trên branch sai, mà không cần phải code lại.
+Nó giúp bạn apply các commit sai branch mà không cần phải code lại.
 
 Ví dụ:
 
