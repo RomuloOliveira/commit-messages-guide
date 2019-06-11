@@ -18,6 +18,7 @@ It may help you to learn what a commit is, why it is important to write good mes
 - [简体中文](README_zh-CN.md)
 - [日本語](README_ja-JP.md)
 - [Українська](README_ua-UA.md)
+- [پارسی](README_fa-IR.md)
 
 ## What is a "commit"?
 
