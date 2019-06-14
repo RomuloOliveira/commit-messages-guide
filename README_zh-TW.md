@@ -8,7 +8,7 @@
 
 ## 什麼是“commit”？
 
-簡單來說，commit 就是在本地資料庫中撰寫的檔案的 _快照_。與印象中不同的是，[git 不僅儲存不同版本檔案之間的差異，還儲存了所有檔案的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。對於兩個 commit 之間沒有被修改的檔案，git 只儲存指向前一個完全相同的檔案的鏈結。
+簡單來說，commit 就是在本地資料庫中撰寫的檔案的 _快照_。與印象中不同的是，[git 不僅儲存不同版本檔案之間的差異，還儲存了所有檔案的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。對於兩個 commit 之間沒有被修改的檔案，git 只儲存指向前一個完全相同的檔案的連結。
 
 下面的圖片展示了 git 如何隨著時間儲存資料，其中每個 “Version” 都是一個 commit：
 
@@ -21,7 +21,7 @@
 - 解釋那些無法只透過程式碼來描述的“為什麼”
 - 幫助未來的維護人員明白為什麼以及如何產生的變更，從而使問題排查和除錯更容易
 
-為了最大化這些結果，我們可以使用下一節中描述的一些好的實踐方式和標準。
+為了最好的效果，我們可以使用下一節中描述的一些好的實踐方式和標準。
 
 ## 好的實踐方式
 
@@ -32,13 +32,13 @@
 ```
 # Good
 Use InventoryBackendPool to retrieve inventory backend
-用 InventoryBackendPool 獲取庫存
+用 InventoryBackendPool 取得存貨
 ```
 
 ```
 # Bad
 Used InventoryBackendPool to retrieve inventory backend
-InventoryBackendPool 被用於獲取庫存
+InventoryBackendPool 被用於取得存貨
 ```
 
 _不過為什麼要使用祈使句呢？_
@@ -201,7 +201,7 @@ cdcdcd Agora vai
 用 50 個左右或更少的字來描述變更
 
 如有必要，可以提供更詳細的補充說明，並儘可能將其限定在每行 72 個字左右。
-在某些情況下，第一行被視為 commit 的標題，其餘路分被視為內容主體。
+在某些情況下，第一行被視為 commit 的標題，其餘的文字被視為內容主體。
 因此，將標題從內容分離出來的空白行就顯得非常重要(除非完全省略內容)。
 如若不然，在使用命令列，如 “log”，“shortlog” 以及 “rebase” 的時候，將會很容易混淆。
 
@@ -212,7 +212,7 @@ cdcdcd Agora vai
 
 接下來請另起一行。
 
- - 也可以使用枚舉要點的格式。
+ - 也可以使用列舉的格式 (bullet point)。
 
  - 通常使用連字號(-)或星號(*)作為要點段落標記，標記與內容之間留一空格，各要點之間留一空白行。但這取決於你們的約定。
 
