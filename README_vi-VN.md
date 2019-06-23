@@ -1,35 +1,35 @@
-# Hướng dẫn viết nội dung commit
+# Hướng dẫn viết commit
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
-Hướng dẫn này giúp ta hiểu được tầm quang trọng của việc viết nội dung commit tốt.
+Đây là một bài hướng dấn giúp hiểu được tầm quan trọng của các commit messages và biết cách làm sao để viết chúng cho thật tốt.
 
-Nó giúp bạn biết được commit là gì, tại sao viết một message thì quan trọng, các ví dụ thực tiễn và vài mẹo để lập kế hoạch và viết lại một commit history tốt.
+Ở bài hướng dẫn này, bạn sẽ hiểu commit là gì, tầm quan trọng của việc viết message tốt cho commit của bạn, những cách thực hành tốt nhất, một số mẹo để lên kế hoạch viết commit và viết/viết lại một lịch sử commit cho tốt.
 
-# "Commit" là gì?
+## "Commit" là gì?
 
-Nói một cách đơn giản, commit là một snapshot của các local file, được viết trong local repository.
-Trái với suy nghĩ của một số người, [git không chỉ lưu trữ sự khác biệt giữa các file, nó còn lưu trữ full version của tất cả các file](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
-Đối với các file không có sự thay đổi từ commit này sang commit khác, git chỉ lưu trữ một liên kết tới file giống hệt trước đó đã được lưu.
+Hãy nghĩ đơn giản, một commit là một _ảnh_ (hoặc bản sao) của những file cục bộ trên kho lưu trữ cá nhân của bạn.
+Khác với suy nghĩ của nhiều người, [git không chỉ lưu những khác biệt giữa các phiên bản của file mà lưu trữ toàn bộ các phiên bản](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Đối với những file không có sự thay đổi so với phiên commit trước, thay vì lưu một file mới, việc git làm đơn giản sẽ là lưu trữ một link trỏ tới file đã được lưu trước đó.
 
-Hình ảnh bên dưới cho thấy cách git lưu trữ dữ liệu theo thời gian, trong đó mỗi "Version" là một commit:
+Hình sau mô tả cách mà git lưu trữ dữ liệu theo thời gian, trong đó mỗi một "phiên bản" là một commit:
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
-# Tại sao commit message thì quan trọng
+## Tại sao những commit message lại quan trọng?
 
-- Để tăng tốc và hợp lý hóa các code review
-- Để giúp hiểu về sự thay đổi
-- Để giải thích lí do sự thay đổi, cái mà không thể diễn tả được chỉ bằng code
-- Để giúp các maintainer trong tương lai tìm ra lý do và cách thức các thay đổi được thực hiện, giúp khắc phục sự cố và debug dễ dàng hơn
+- Làm cho việc đánh giá code trở nên nhanh chóng và hiệu quả hơn.  
+- Để giúp người khác hiểu về những sự thay đổi.  
+- Để giải thích lý do "tại sao" chỉ giải thích bằng code là chưa đủ mà còn phải thêm bằng message.  
+- Để sau này, những người bảo trì project có thể tìm ra lý do tại sao lại có những thay đổi và chúng được thực hiện như thế nào, điều này làm cho việc khắc phục sự cố cũng như gở lỗi trở nên dễ dàng hơn.
 
-Để tối đa hóa các kết quả đó, chúng ta có thể sử dụng một số ví dụ thực tiễn được mô tả trong phần tiếp theo.
+Để hiểu thêm về những điểm trên, chúng ta có thể sử dụng các good practices(tạm hiểu là những cách làm tốt, được rút ra từ kinh nghiệm, Tiếng Việt không có từ ngữ tương ứng nên người dịch sẽ giữ nguyên từ này) và những tiêu chuẩn được mô tả bên dưới.
 
-## Ví dụ thực tiễn
+## Good Practices
 
-Đây là một số ví dụ thực tiễn được thu thập từ kinh nghiệm của tôi, bài viết trên internet và các hướng dẫn khác. Nếu bạn có không đồng ý với một số thứ, vui lòng mở Pull Request và đóng góp.
+Đây là những cách làm tốt mà tác giả thu thập từ kinh nghiệp thực tế, bài báo trên internet cũng như như một số bài hướng dẫn khác. Nếu thấy có sai sót hoặc muốn thêm ví dụ vui lòng mở một Pull Request và tham gia đóng góp.  
 
-### Dùng dạng câu mệnh lệnh
+### Dùng thể mệnh lệnh(imperative form)
 
 ```
 # Good
@@ -41,11 +41,11 @@ Use InventoryBackendPool to retrieve inventory backend
 Used InventoryBackendPool to retrieve inventory backend
 ```
 
-_Nhưng tại sao lại dùng câu mệnh lệnh_
+_Nhưng tại sao phải dùng thể mệnh lệnh?_
 
-Một commit message mô tả những cái thay đổi được tham chiếu đến việc **thực hiện ở hiện tại**, những tác động của nó, chứ không phải những cái đã được thực hiện.
+Một commit message mô tả các thay đổi này thực sự **làm** những gì, tác động của nó, chứ không phải nói về những việc đã được thực hiện.
 
-[Bài viết tuyệt vời này đến từ Chris Beams](https://chris.beams.io/posts/git-commit/) cung cấp cho chúng ta một câu đơn giản có thể được sử dụng để giúp chúng ta viết commit message tốt hơn ở dạng mệnh lệnh:
+[Bài báo tuyệt vời của Chris Beams](https://chris.beams.io/posts/git-commit/) cung cúp cho chúng ta một mẫu câu đơn giản mà ta có thể dùng, giúp chúng ta viết commit message tốt hơn ở thể mệnh lệnh:
 
 ```
 If applied, this commit will <commit message>
@@ -63,7 +63,7 @@ If applied, this commit will use InventoryBackendPool to retrieve inventory back
 If applied, this commit will used InventoryBackendPool to retrieve inventory backend
 ```
 
-### Viết hoa chữ cái đầu tiên
+### Viết hoa chữ cái đầu
 
 ```
 # Good
@@ -75,12 +75,12 @@ Add `use` method to Credit model
 add `use` method to Credit model
 ```
 
-Lý do mà chữ cái đầu tiên nên được viết hoa là tuân theo quy tắc ngữ pháp sử dụng chữ in hoa ở đầu câu.
+Lý do là chúng ta phải tuân theo luật ngữ pháp về việc viết hoa chữ cái đầu tiên của câu.
 
-Việc sử dụng chữ cái in hoa ở đầu câu có khác nhau với mỗi người, mỗi team hoặc thậm chí giữa ngôn ngữ này với ngôn ngữ khác.
-Viết hoa hay không, một điểm quan trọng là tuân theo một tiêu chuẩn duy nhất và theo sát nó.
+Việc sử dụng practice này có thể khác nhau tùy từng người, từng team, hoặc giữa các ngôn ngữ.
+Viết hoa hay không thì điều quan trọng là phải tuân theo một tiêu chuẩn duy nhất, không được đan xen tùy lúc.  
 
-### Cố gắng truyền đạt được những gì thay đổi mà không cần phải nhìn vào source code
+### Cố gắng truyền đạt những gì thay đổi gây ra mà không cần phải xem mã nguồn.
 
 ```
 # Good
@@ -103,9 +103,9 @@ Increase left padding between textbox and layout frame
 Adjust css
 ```
 
-Nó rất hữu ích trong nhiều tình huống (ví dụ: nhiều lần commit, một số thay đổi và refactor) để giúp reviewer hiểu người được những gì commiter đang nghĩ.
+Việc này rất hữu ích trong nhiều tình huống (Ví dụ: Nhiều commit, có một vài thay đổi và cấu trúc lại) để giúp những người đánh giá có thể hiểu người commit đã nghĩ gì.
 
-### Sử dụng phần thân message để giải thích "why", "for what", "how" và các chi tiết bổ sung
+### Sử dụng phần thân của message để giải thích "tại sao", "để làm gì", "như thế nào" và một số chi tiết bổ sung
 
 ```
 # Good
@@ -137,12 +137,11 @@ Change from namedtuple to class because we need to
 setup a new attribute (in_use_amount) with a new value
 ```
 
-Chủ đề và phần thân message được phân tách bằng một dòng trống.
-Các dòng trống bổ sung được coi là một phần của nội dung message.
+Phần tiêu đề và phần thân của message phải được ngăn ra bởi một dòng trống. Những dòng trống phía dưới dòng trống đó(nếu có) sẽ được xem như thuộc phần thân của message.  
 
-Các ký tự như `-`, `*` và \` là các phần tử để giúp việc đọc message dễ hơn.
+Những kí tự như `-`, `*` và \` là những yếu tố message dễ đọc hơn.
 
-### Tránh viết các message chung chung mà không có bất kỳ ngữ cảnh nào
+### Tránh những message có nội dung chung chung hoặc những message mà không hề có bối cảnh  
 
 ```
 # Bad
@@ -157,15 +156,15 @@ Change stuff
 Adjust css
 ```
 
-### Giới hạn số lượng ký tự
+### Giới hạn số lượng chữ cái.
 
-[Người ta khuyến khích](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) sử dụng tối đa 50 ký tự cho chủ đề và 72 ký tự cho phần thân message.
+[Bạn nên](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) sử dụng tối đa 50 ký tự cho phần chủ đề và 72 ký tự mỗi dòng cho phần thân message.  
 
-### Ngôn ngữ phải nhất quán
+### Có sự nhất quán trong việc sử dụng ngôn ngữ
 
-Đố với các project owner: Chọn một ngôn ngữ và viết tất cả các commit message bằng ngôn ngữ đó. Hợp lý nhất là nó phải phù hợp với các code comment, ngôn ngữ dịch mặc định (đối với các dự án được bản địa hóa), v.v.
+Đối với chủ dự dán: Chọn một ngôn ngữ và viết mọi commit message bằng ngôn ngữ đó. Choose a language and write all commit messages using that language. Lý tưởng nhất là ngôn ngữ dùng cho commit message phải khớp với các code comment, ngôn ngữ dịch mặc định (đối với những dự án được bản địa hóa), v.v...
 
-Đối với các contributor: Viết commit message chung với ngôn ngữ tồn tại trong commit history.
+Đối với những người tham gia đóng góp: Viết commit message bằng ngôn ngữ tương tự ngôn ngữ của các commit message trước đó.  
 
 ```
 # Good
@@ -188,9 +187,9 @@ efefef Add `use` method to Credit model
 cdcdcd Agora vai
 ```
 
-### Template
+### Commit message mẫu
 
-Đây là một template, [được viết bởi Tim Pope](ttp://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), xuất hiện trong [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
+Đây là mẫu commit message, [được viết ban đầu bởi Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) và xuất hiện trong cuốn [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 
 ```
 Summarize changes in around 50 characters or less
@@ -222,53 +221,87 @@ Resolves: #123
 See also: #456, #789
 ```
 
-## Rebase và Merge
+Việc dịch nội dung này theo người dịch là không cần thiết, tuy nhiên để những bạn mới tập làm quen hiểu rõ hơn thì người dịch sẽ cung cấp thêm bản dịch của mẫu trên:
 
-Phần này là một phần trong các hướng dẫn của Atlassian, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+```
+Tóm tắt những thay đổi trong 50 ký tự hoặc ít hơn
+
+Thêm những giải thích nếu cần thiết, khoảng 72 chữ một dòng. Trong một 
+số bối cảnh, dòng đầu tiên được xem là tiêu đề và phần còn lại chính là
+nội dung. Dòng trống phân tách giữa tiêu đề và phần thân rất quan trọng
+, trừ khi bạn không viết phần thân; nhiều công cụ như `log`, `shortlog`
+và `rebase` có thể bối rối nếu bạn không để dòng trống ở giữa.
+
+Giải thích vấn đề mà phiên commit này giải quyết. Tập trung vào lý do 
+tại sao lại thay đổi thay vì giải thích cách thức thay đổi - How (code 
+của ta sẽ giải thích how). Có tác dụng phụ hay hậu quả (có chứng cứ) 
+của những những thay đổi này không?  Đây là nơi chúng ta giải thích 
+chúng.
+
+Các đoạn tiếp theo cũng sẽ đúng sau một dòng trống.
+
+ - Các bullet point được chấp nhận.
+
+ - Các bullet point thường thấy là các dấu gạch đầu dòng và các dấu hoa
+  thị. Trước các bullet point là một khoảng trắng, giữa các ý là một 
+  dòng trống. Tuy nhiên chỗ này sẽ có một số quy ước khác nhau.
+
+Nếu bạn sử dụng trình theo dõi vấn đề (issue tracker), Đặt tham chiếu 
+đến chúng ở dưới cùng, như thế này:
+
+Giải quyết: #123
+Xem thêm: #456, #789
+```
+
+## Rebase vs. Merge
+
+Chương này là một [**TL;DR**](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)(bản tóm tắt ngắn gọn) của bài hướng dẫn tuyệt vời của Atlassian, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
+Ở đây người dịch sẽ không dịch từ rebase và merge sang Tiếng Việt để tránh gây bối rối cũng như tiện cho người đọc tìm hiểu keyword sau này.
+
 ### Rebase
 
-Apply có thể dịch là thêm hoặc là chấp nhận, từng cái một, vào sau branch cơ sở, tạo ra một tree mới.
+**TL;DR:** Gắn các commit trên nhánh của bạn, từng cái một, lên branch gốc, tạo ra một cây mới.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
 ### Merge
 
-Tạo một commit mới, được gọi là _merge commit_, với sự khác biệt giữa hai branch.
+**TL;DR:** tạo một commit mới, gọi là(một cách thích hợp) một _merge commit_, chứa tất cả những sự khác nhau giữa 2 branch.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
-## Vì sao một số người thích rebase hơn merge?
+### Tại sao một số người thích rebase hơn merge?
 
-Tôi đặc biệt thích rebase hơn merge vì một số lý do sau:
+Tác giả đặc biệt thích rebase hơn merge. Có những lý do sau:
 
-- Nó tạo ra một history "sạch", không có các merge commit không cần thiết
-- Những gì bạn thấy là những gì bạn nhận được, tức là, trong code review, tất cả các thay đổi đều đến từ một commit cụ thể và được cho phép, để tránh các thay đổi ẩn trong merge commit
-- Thực hiện merge nhiều được giải quyết bởi committer, và mỗi sự thay đổi do merge đều nằm trong một commit với một message phù hợp
-    - Việc khai thác và xem xét các merge commit là không thông dụng, vì vậy hãy tránh chúng để đảm bảo tất cả các thay đổi đều có commit đúng nơi thuộc về chúng
+* Nó sinh ra một lịch sử "sạch", không có những merge commit không cần thiết.  
+* _Bạn thấy gì bạn sẽ nhận cái đó_, i.e., trong lúc đánh giá code,ta sẽ thấy được mọi thay đổi từ các commit cụ thể và có tên, tránh những thay đổi ẩn nằm trong các merge commits.  
+* Nhiều merges được giải quyết bởi người commit hơn, và mỗi một sự thay đổi do merge gây ra sẽ nằm commit với message phù hợp.  
+ * Thông thường ta sẽ không khai thác cũng như đánh giá những merge commit, vì thế tránh chúng để đảm bảo mọi thay đổi điều có commit chứa thay đổi đó.
 
-### Khi nào "squash"
+### Khi nào cần squash
 
-"Squashing" là quá trình thực hiện một loạt các commit và cô đọng chúng thành một commit duy nhất.
+"Squashing" là quá trình lấy một dãy commit và ép lại thành một commit duy nhất.
 
-Nó hữu ích trong một số tình huống, ví dụ:
+Sẽ rất hữu ích trong một vài tình huống, ví dụ:
 
-- Giảm các commit mà có ít hoặc không có ngữ cảnh (như sửa lỗi chính tả, định dạng, nội dung bị quên)
-- Hợp nhất các thay đổi rời rạc có ý nghĩa khi apply chúng cùng nhau
-- Viết lại công việc commit đang tiến hành
+- Giảm những commits ít hoặc không có ngữ cảnh (sửa lỗi chính tả, định dạng, nội dung bị quên)
+- Kết hợp những sự thay đổi riêng biệt, những thay đổi này có ý nghĩa hơn khi áp dụng cùng nhau.
+- Viết lại những commit kiểu _công việc đang tiếng hành_.
 
-### Khi nào cần tránh rebase hoặc squash?
+### Khi nào nên tránh rebase hoặc squash?
 
-Cần tránh rebase và squash trong commit công khai hoặc trong các branch được chia sẻ, nơi mà có nhiều người làm việc cùng nhau.
-Rebase và squash viết lại history và ghi đè các commit đang tồn tại, thực hiện nó trên các commit trên các branch được chia sẻ (nghĩa là các commit được push đến một remote repository hoặc đến từ các branch khác) có thể gây ra nhầm lẫn và mọi người có thể bị mất các thay đổi của họ (cả trên local và remote) bởi vì các tree bất đồng nhau và các xung đột.
+Tránh rebase và squash ở những commit công khai hoặc những nhánh đồng sở hữu nơi nhiều người cùng làm việc trên nhánh đó.
+Rebase và squashy viết lại history và ghi đè lên các commit hiện có, thực hiện nó trên những commit trên những nhánh đồng sở hữu (ví dụ, commit được đẩy đến một kho lưu trữ từ xa hoặc đến từ những nhánh khác) có thể gây bối rối và mọi người có thể mất những thay đổi của họ (cục bộ lẫn từ xa) bởi những cây phân nhánh và xung đột(divergent trees and conflicts).  
 
-## Các git command hữu ích
+## Những git command hữu ích
 
 ### rebase -i
 
-Sử dụng nó để squash commit, sửa các message, viết lại/xóa/sắp xếp lại các commit, v.v.
+Sử dụng để squash những commit, sửa messages, viết lại/xóa/sắp xếp lại những commit, v,v...
 
 ```
 pick 002a7cc Improve description and update document title
@@ -309,12 +342,12 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 #### fixup
 
-Sử dụng nó để dọn dẹp các commit dễ dàng hơn và không cần một rebase phức tạp hơn.
-[Bài viết này](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) có các ví dụ rất hay về cách thức và thời điểm thực hiện nó.
+Sử dụng để dọn dẹp các commit một cách dễ dàng và không cần rebase phức tạp.
+[Bài báo này](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) có những ví dục tốt về cách thức cũng như khi nào thì nên sử dụng fixup.
 
 ### cherry-pick
 
-Nó giúp bạn apply các commit sai branch mà không cần phải code lại.
+`cherry-pick` Khi bạn commit sai nhánh, sử dụng cherry-pick để lấy một commit trên nhánh sai và áp dụng vào nhánh mình muốn, thay vì phải code lại từ đầu.
 
 Ví dụ:
 
@@ -327,7 +360,7 @@ $ git cherry-pick 790ab21
 
 ### add/checkout/reset [--patch | -p]
 
-Hãy theo dõi diff dưới đây:
+Tưởng tượng chúng ta có những sự khác biệt sau:
 
 ```diff
 diff --git a/README.md b/README.md
@@ -356,8 +389,8 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-Chúng ta có thể sử dụng `git add -p` để chỉ thêm các bản vá mà chúng ta muốn, mà không cần phải thay đổi code đã được viết.
-Thật hữu ích khi chia một thay đổi lớn thành các commit nhỏ hơn hoặc reset/checkout các thay đổi cụ thể.
+Chúng ta có thể dùng `git add -p` để thêm duy nhất chỗ mà ta muốn, không cần phải thay đổi code đã được viết.
+Sẽ hữu ích khi chia một thay đổi lớn thành những commit nhỏ hơn hoặc reset/checkout một thay đổi cụ thể.
 
 ```
 Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]? s
@@ -407,25 +440,25 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-## Giới thiệu các chủ đề thú vị khác
+## Những thứ thú vị khác có thể tham khảo:
 
 - https://whatthecommit.com/
 - https://gitmoji.carloscuesta.me/
 
-## Like it?
+## Thích tài liệu này?
 
-[Say thanks!](https://saythanks.io/to/RomuloOliveira)
+[Gởi lời cảm ơn tới RomuloOliveira!](https://saythanks.io/to/RomuloOliveira)
 
 ## Đóng góp
 
-Bất kỳ hình thức trợ giúp nào cũng được đánh giá cao. Ví dụ về các chủ đề mà bạn có thể giúp tôi:
+Mọi sự đóng góp nào điều được đánh giá cao. Ví dụ về những chủ đề mà bạn có thể giúp:
 
-- Sửa lỗi ngữ pháp và chính tả
-- Dịch sang các ngôn ngữ khác
-- Cải thiện nguồn tham khảo
-- Thông tin không chính xác hoặc không đầy đủ
+- Sửa lỗi ngữ pháp và lỗi chính tả  
+- Dịch sang ngôn ngữ khác  
+- Cải thiện nguồn tham khảo  
+- Sửa các thông tin không chính xác hoặc không đầy đủ  
 
-## Nguồn tham khảo và đọc thêm
+## Nguồn cảm hứng, nguồn và đọc thêm:
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
