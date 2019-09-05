@@ -4,28 +4,21 @@
 
 Un guide pour comprendre l'importance des messages de commit et comment bien les écrire.
 
-Cela pourrait vous aider à comprendre ce qu'un commit est, pourquoi c'est important de bien écrire ses messages, les meilleurs techniques et quelques astuces, pour mieux (ré)écrire une bonne "commit history" 
+Cela pourrait vous aider à comprendre ce qu'un commit est, pourquoi c'est important de bien écrire ses messages, les meilleurs techniques et quelques astuces, pour mieux (ré)écrire une bonne "commit history"
 
-## Langages Disponibles
-
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Français](README_fr-FR.md)
 ## Qu'est-ce qu'un "commit" ?
 
-Dans des termes simples, un commit est une _sauvegarde_ de vos fichiers local, écrits dans votre repository local.
-Contrairement à ce que certaines personnes pensent, [git ne stockent pas seulement la différence entre ces fichiers, il stock une version complète de tous les fichiers](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
-For les fichiers qui ne changent pas d'un commit à l'autre, git stock just un lien vers la version précédente identique qui est déjà stockée.
+Dans des termes simples, un commit est une _sauvegarde_ de vos fichiers locaux, écrits dans votre dépôt local.
+Contrairement à ce que certaines personnes pensent, [git ne stocke pas seulement la différence entre ces fichiers, il stocke une version complète de tous les fichiers](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Pour les fichiers qui ne changent pas d'un commit à l'autre, git stocke juste un lien vers la version précédente identique qui est déjà stockée.
 
-L'image ci-dessous montre comment git stock les fichiers à travers le temps, dans quelle "Version" est un commit.
-
+L'image ci-dessous montre comment git stocke les fichiers à travers le temps, dans quelle "Version" est un commit.
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
 ## Pourquoi les messages de commit sont importants ?
 
-- Pour raccourcir et faciliter les code-review
+- Pour raccourcir et faciliter les revues de code.
 - Pour aider dans la compréhension d'un changement.
 - Pour expliquer les "pourquoi", qui ne sauraient être décris en code
 - Pour aider les futurs personnes qui vont devoir maintenir le code à comprendre les différents changements, et l'évolution du code.
@@ -44,7 +37,7 @@ Use InventoryBackendPool to retrieve inventory backend
 ```
 
 ```
-# Mauvais 
+# Mauvais
 Used InventoryBackendPool to retrieve inventory backend
 ```
 
@@ -169,11 +162,12 @@ Adjust css
 
 [It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use a maximum of 50 characters for the subject and 72 for the body.
 
-### Keep language consistency
+### Garder la cohérence linguistique
 
-For project owners: Choose a language and write all commit messages using that language. Ideally it should match the code comments, default translation locale (for localized projects), etc.
+Pour les propriétaires de projet: Choisissez une langue et écrivez tous les messages de validation en utilisant cette langue. Idéalement, il devrait correspondre aux commentaires de code, aux paramètres régionaux de traduction par défaut (pour les projets localisés), etc.
 
-For contributors: Write your commit messages using the same language as the existing commit history.
+Pour les contributeurs: Écrivez vos messages de validation en utilisant la même langue que l'historique de validation existant.
+
 
 ```
 # Bon
@@ -198,37 +192,32 @@ cdcdcd Agora vai
 
 ### Modèle
 
-C'est un modèle, [Créé par Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), qui apparait dans le  [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
+C'est un modèle, [écrit par Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), qui apparait dans le  [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 
 ```
-Résumer les changement en 50 charactères ou moins.
+Résumer les changements en 50 caractères ou moins.
 
-Les textes plus détaillées, si nécéssaires, peuvent être plus ou moins
-de 72 charactères. Dans certains contextes, la première ligne est traitée
-en tant que sujet du commit et le rest en tant que corps. La ligne
-blanche séparrant le sommaire du corps est critique (sauf si il n'y a
-pas de corps du tout); certains outils tels que `log`, `shortlog` et
-`rebase` peuvent être confus si vous les lancez ensemble.
+Texte explicatif plus détaillé, si nécessaire. Mettez un retour à la ligne à environ 72 caractères. Dans certains contextes, la première ligne est traitée
+en tant que sujet du commit et le reste en tant que corps. La ligne
+vide séparant le sommaire du corps est critique (sauf si vous omettez complètement le corps); certains outils tels que `log`, `shortlog` et
+`rebase` peuvent être confus si vous les fusionnez ensemble.
 
-Expliquez le problème que le commit résout. Concentrez vous sur
-"pourquoi" vous faites ce changement contrairement à "comment"
-(le code explique déjà cela).
-Est-ce qu'il y a des effets ou d'autres conséquences qui ne sont
-pas intuitives concernant ce changement ? C'est l'endroit où vous
-pouvez les décrire.
+Expliquez le problème que ce commit est en train de résoudre. Concentrez-vous sur
+les raisons pour lesquelles vous apportez ce changement, par opposition à la
+façon dont (le code explique cela).
+Est-ce qu'il y at-il des effets secondaires ou d’autres conséquences non intuitives de ce changement? Voici l'endroit pour les expliquer.
 
-Les autres paragraphes viennent après des lignes vides.
+Les autres paragraphes viennent après les lignes vides.
 
  - Les puces sont ok.
 
- - Vous pouvez utilisez des astérisques et des puces, tout en gardant
-   une syntaxe correcte.
+ - Généralement, un tiret ou un astérisque est utilisé pour la puce, précédé d'un espace, avec des lignes vides entre les deux, mais les conventions varient ici.
 
 Si vous utilisez un outil de suivi des problèmes,
-mettez des références à la fin comme ceci:
+mettez les références à la fin comme ceci:
 
 Resolves: #123
-See also: #456, #789
+Voir aussi: #456, #789
 ```
 
 ## Rebase vs. Merge
@@ -254,31 +243,31 @@ Cette section est un **TL;DR** de l'excellent tutoriel d'Atlassian, ["Merging vs
 Je préfère particulièrement rebase plutôt que merge. Les raisons sont:
 
 * Cela génère un historique "propre", sans merge commits inutiles.
-* _Ce que vous voyez est ce que avez_, i.e., dans une code review tout les changements viennent d'un commit spécifique, empéchant les changements cachés dans les merge commits
-* Plus de merges sont résolus par la personne qui commit, et chaque merge change est dans un commit avec un message propre à celui-ci.
-    * Ce n'est pas commun de chercher et d'examiner les merge commits, donc les éviter assure que tous les changements ont un commit où ils sont.
+* Ce que vous voyez est ce que vous obtenez, c’est-à-dire que dans une revue de code, toutes les modifications proviennent d’un commit spécifique, évitant les changements masqués dans les commits de merge.
+* Plus de merges sont résolus par la personne qui commit, et chaque modification de merge est dans un commit avec un message propre à celui-ci.
+* Il est inhabituel de chercher et d'examiner les commits de merge. Evitez-les donc pour vous assurer que tous les changements ont un commit auquel ils appartiennent.
 
 ### Quand "squash"
 
-"Squasher" c'est prendre une série de commits et les condensser dans un seul commit.
+"Squashing" est le processus consistant à prendre une série de commits et à les condenser en un seul commit.
 
 C'est utile dans plusieurs situations, e.g.:
 
 - Réduire le nombre de commit avec peu ou pas de contexte (correction de fautes d'orthographe, formatage, choses oubliées)
-- Regrouper des changements séparés, qui ont plus de sens une fois regroupés.
+- Joindre des modifications distinctes qui ont plus de sens lorsqu'elles sont appliquées ensemble
 - Réécrire les commits de _travail en cours_
 
 ### Quand éviter rebase ou squash ?
 
 Il faut éviter rebase et squash dans les commits publiques ou dans les branches partagées où plusieurs personnes travaillent dessus.
-
-Rebase et squash réécrivent l'history and écrasent less commits existants, le faire sur des commits qui sont dans des branches partagées (i.e., les commits push sur le remote repository ou qui viennent d'autres branches) peut entrainer de la confusion, et les gens risquent de perdre leurs changements (autant localement que remotely) car les arbres et les conflicts divergent.
+Rebase et squash réécrivent l'historique et écrasent les commits existants, le faire sur des commits qui sont dans des branches partagées (i.e., les commits push sur le dépôt distant ou qui viennent d'autres branches) peut entrainer de la confusion, et les gens risquent de perdre leurs changements (autant localement que à distance) car les arbres et les conflicts divergent.
 
 ## Commandes git pratiques
 
 ### rebase -i
 
-Utilise là to squash les commits, editer les messages, réécrire/supprimer/réorganiser les commits, etc.
+Utilisez-la pour squash les commits, modifier les messages, réécrire/supprimer/réorganiser les commits, etc.
+
 
 ```
 pick 002a7cc Improve description and update document title
@@ -319,14 +308,14 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 #### fixup
 
-Utilise là to nettoyer les commits facilement et sans avoir besoin d'un rebase plus complexe.
+Utilisez-la pour nettoyer les commits facilement et sans nécessiter de rebase plus complexe.
 [Cet article](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) a de bons exemples de comment et quand le faire.
 
 ### cherry-pick
 
-C'est très utile pour appliquer des commits étant fais sur la mauvaise branche, sans avoir besoin de le recoder. 
+C'est très utile pour appliquer le commit que vous avez fait sur la mauvaise branche, sans qu'il soit nécessaire de le coder à nouveau.
 
-Example:
+Exemple:
 
 ```
 $ git cherry-pick 790ab21
@@ -337,7 +326,7 @@ $ git cherry-pick 790ab21
 
 ### add/checkout/reset [--patch | -p]
 
-Immaginons que nous avons le diff suivant:
+Imaginons que nous avons le diff suivant:
 
 ```diff
 diff --git a/README.md b/README.md
@@ -358,17 +347,17 @@ index 7b45277..6b1993c 100644
 +
  ## Contribuer
 
- Toute sorte d'aide est apréciée. Voici quelques exemples de sujets où vous pouvez m'aider. 
+ Toute sorte d'aide est apréciée. Voici quelques exemples de sujets où vous pouvez m'aider.
 
-@@ -202,3 +205,4 @@ Toute sorte d'aide est apréciée. Voici quelques exemples de sujets où vous pouvez m'aider. 
+@@ -202,3 +205,4 @@ Toute sorte d'aide est apréciée. Voici quelques exemples de sujets où vous pouvez m'aider.
 
  - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
  - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-Ont peut utiliser 'git add -p' pour ajouter seulement les patch que nous souhaitons, sans le besoin de changer le code qui est déjà écrit.
-C'est utile de séparer un gros changement en plusieurs commits ou de reset/checkout certains changements spécifiques.
+On peut utiliser git add -p pour ajouter uniquement les correctifs que nous voulons, sans qu'il soit nécessaire de modifier le code déjà écrit.
+Il est utile de scinder un gros changement en de plus petits commits ou de réinitialiser/extraire des modifications spécifiques.
 
 ```
 Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]? s
@@ -420,21 +409,23 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 
 ## D'autres choses intéréssantes
 
-https://whatthecommit.com/
+- https://whatthecommit.com/
+- https://gitmoji.carloscuesta.me/
 
 ## Vous aimez ?
 
 [Dites merci!](https://saythanks.io/to/RomuloOliveira)
 
-## Prendre Part
-Toute sorte d'aide est apréciée. Voici quelques exemples de sujets où vous pouvez m'aider :
+## Contribuer
 
-- Grammaire et correction orthopgraphique
+Toute sorte d'aide est appréciée. Voici quelques exemples de sujets où vous pouvez m'aider :
+
+- Corrections grammaticales et orthographiques
 - Traduction dans d'autres langues
 - Meilleures référencement des sources
 - Informations incorrectes ou incompletes
 
-## Inspirations, sources et d'autre choses à lire :
+## Inspirations, sources et lectures complémentaires:
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
