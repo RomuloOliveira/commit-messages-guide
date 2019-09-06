@@ -7,15 +7,6 @@
 
 コミットとは何か、良いコミットメッセージを書くことが重要であるのはなぜか、良いコミット履歴を計画し書く(書き直す)ための最良の方法とコツを学ぶのを手助けできるかもしれません。
 
-## 各国語版
-
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Español](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-- [日本語](README_ja-JP.md)
-
 ## 「コミット」とは何か?
 
 簡単に言うと、コミットとはあなたのローカルリポジトリーに書かれたローカルファイルの _スナップショット_ です。
