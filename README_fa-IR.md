@@ -2,8 +2,10 @@
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
+&#x202b;
 راهنمایی برای درک اهمیت Commit-Message و نحوه نوشتن صحیح آن.
 
+&#x202b;
  این راهنما سعی دارد به شما کمک کند یادبگیرید کامیت چیست، چرا نوشتن Commit-Message مناسب مهم است،
 تمرین های خوب و نکاتی که می تواند منجرب به بازنگری و داشتن تاریخچه کامیت بهتری شود
 
@@ -23,6 +25,7 @@
 
 ## "Commit" چیست ?
 
+&#x202b;
 به زبان ساده، یک کامیت اسنپ شات ی از فایل های محلی شما هست که در مخزن محلی نوشته میشود
 برخلاف تصور افراد، [گیت تنها تغییرات فایل هارا نگهداری نمی کند بلکه نسخه کاملی از آنها را نگهداری میکند](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
 و برای فایل هایی که تغییری در آنها داده نشده تنها لینک منطبق با فایل موجود را نگهداری میکند.
@@ -58,8 +61,10 @@ Used InventoryBackendPool to retrieve inventory backend
 
 _اما چرا ما شکل دستوری را استفاده میکنیم?_
 
+&#x202b;
 یک Commit-Message درواقع آن چیزی راکه تغییرات انجام میدهد یا تاثیر آن را توضیح میدهد نه چیزی که انجام شده است
 
+&#x202b;
 [این مقاله جالب توسط Chris Beams](https://chris.beams.io/posts/git-commit/) بوسیله جملات ساده به ما درنوشتن شکل دستوری Commit-Message کمک خواهد کرد:
 
 ```
@@ -152,9 +157,11 @@ Change from namedtuple to class because we need to
 setup a new attribute (in_use_amount) with a new value
 ```
 
+&#x202b;
 موضوع و بدنه پیام کامیت با یک خط خالی جدا می شوند.
 خط های خالی اضافی جزئی از بدنه Commit-Message محسوب خواهند شد
 
+&#x202b;
 کارکتر هایی همچون `-`, `*` و `\` باعث تقویت خوانایی Commit-Message خواهند شد
 
 ### از متن های کلی یا بی محتوا دوری کنید
@@ -174,12 +181,15 @@ Adjust css
 
 ### تعداد کارکتر های مورد استفاده را محدود کنید
 
+&#x202b;
 [توصیه شده](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) برای موضوع Commit-Message حداکثر 50 کارکتر و برای بدنه آن کداکثر 72 کارکتر استفاده شود.
 
 ### در استفاده از زبان نوشتن متن ثابت قدم باشید
 
+&#x202b;
 برای مالک پروژه: انتخاب یک زبان و نوشتن همه Commit-Message ها بوسیله آن، که باید همان زبان مورد استفاده برای کامنت ها و زبان پیش فرض برای پروژه های چند زبانه باشد
 
+&#x202b;
 برای مشارکت کنندگان: نوشتن Commit-Message با زبان مشابه متن های کامیت قبلی
 
 ```
@@ -205,6 +215,7 @@ cdcdcd Agora vai
 
 ### قالب
 
+&#x202b;
  این یک قالب [نوشته شده توسط Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) که در [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) قابل دسترسی می باشد
 
 ```
@@ -264,6 +275,7 @@ See also: #456, #789
 
 ## Rebase vs. Merge
 
+&#x202b;
 این قسمت خلاصه ای از آموزش عالی اطلسین می باشد، ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
@@ -276,6 +288,7 @@ See also: #456, #789
 
 ### Merge
 
+&#x202b;
 بطور خلاصه ایجاد یک کامیت جدید بنام _merge commit_ شامل اختلاف دو برنچ
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
@@ -292,6 +305,7 @@ See also: #456, #789
 
 ### چه وقت از squash استفاده کنیم
 
+&#x202b;
 "Squashing" پروسه ای می باشد که یک سری ازکامیت ها به یک کامیت تبدیل خواهند شد
 و در وضعیت های مختلفی مفید می باشد مانند
 
@@ -306,7 +320,6 @@ See also: #456, #789
 
 این دستورات تاریخچه کامیت ها را بازنویسی همچنین کامیت های موجود رااز بین خواهد برد
 در نتیجه انجام آن برروی برنچ های مشترک می تواند باعث ابهام و یا ازدست رفتن تغییرات بدلیل کانفلیک یا انشعابات در درخت کامیت ها گردد 
-
 
 ## دستورات مفید Git
 
@@ -353,6 +366,7 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 #### fixup
 
+&#x202b;
 از این دستور برای پاک سازی آسان بدون نیاز به پیچیدگی های زیاد rebase می توانید استفاده کنید
 [این مقاله](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) در بردارنده مثال هایی مفیدی از نحوه و زمان انجام آن می باشد
 
@@ -399,6 +413,7 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
+&#x202b;
 توسط `git add -p` ما میتوانید تنها پچ هایی که میخواهیم اضافه کنیم، 
 بدون احتیاج به تغیر کدی که نوشته شده است
 همچنین این امکان میسر خواهند بود تغییرات بزرگ به کامیت های کوچکتر شکسته شود یا تغیرات reset/checkout شوند 
