@@ -25,7 +25,7 @@ L'image ci-dessous montre comment git stocke les fichiers à travers le temps, d
 
 Pour maximiser ces résultats, nous pouvons utiliser certaines bonnes pratiques et des standards, décrits dans la prochaine section.
 
-## Bons Usages
+## Bons usages
 
 Il y a quelques bons usages recueillit par l'experience, des articles sur internet, et d'autres guides. Si vous en avez d'autres (ou n'êtes pas d'accord avec certains), soyez libres d'ouvrir une demande de Pull et de contribuer à l'amélioration du guide.
 
@@ -41,18 +41,18 @@ Use InventoryBackendPool to retrieve inventory backend
 Used InventoryBackendPool to retrieve inventory backend
 ```
 
-_Pourquoi l'impératif ?__
+_Pourquoi l'impératif ?_
 
 Un message de commit décrit ce que le changement **fait**, ces effets, pas ce qui à été fait.
 
-[Cet excelent article de Chris Beams](https://chris.beams.io/posts/git-commit/)
+[Cet excellent article de Chris Beams](https://chris.beams.io/posts/git-commit/)
 Nous donne une phrase simple qui peut être utilisée pour mieux écrire les messages de commit à l'impératif.
 
 ```
 If applied, this commit will <commit message>
 ```
 
-Examples:
+Exemples:
 
 ```
 # Bon
@@ -64,7 +64,7 @@ If applied, this commit will use InventoryBackendPool to retrieve inventory back
 If applied, this commit will used InventoryBackendPool to retrieve inventory backend
 ```
 
-### Capitalize the first letter
+### Mettre une majuscule au début de la phrase
 
 ```
 # Bon
@@ -76,12 +76,11 @@ Add `use` method to Credit model
 add `use` method to Credit model
 ```
 
-The reason that the first letter should be capitalized is to follow the grammar rule of using capital letters at the beginning of sentences.
+On met la première lettre en majuscule pour suivre la règle de grammaire selon laquelle on doit utiliser une majuscule au début d'une phrase.
 
-The use of this practice may vary from person to person, team to team, or even from language to language.
-Capitalized or not, an important point is to stick to a single standard and follow it.
+Cette pratique peut être ou non appliquée en fonction des personnes, des équipes ou même des languages. Dans tous les cas, l'important est de définir une règle et de s'y tenir.
 
-### Try to communicate what the change does without having to look at the source code
+### Essayer de décrire les changements sans avoir à lire le code
 
 ```
 # Bon
@@ -104,9 +103,10 @@ Increase left padding between textbox and layout frame
 Adjust css
 ```
 
-It is useful in many scenarios (e.g. multiple commits, several changes and refactors) to help reviewers understand what the committer was thinking.
+Cela est utile dans de nombreux scenarios (commits multiples, beaucoup changements et refactorisations) pour aider les reviewers à comprendre ce à quoi la personne qui a fait le commit pensait.
 
 ### Use the message body to explain "why", "for what", "how" and additional details
+### Utiliser le corps du message pour expliquer "pourquoi", pour "quoi", "comment" et autres détails
 
 ```
 # Bon
@@ -138,12 +138,11 @@ Change from namedtuple to class because we need to
 setup a new attribute (in_use_amount) with a new value
 ```
 
-The subject and the body of the messages are separated by a blank line.
-Additional blank lines are considered as a part of the message body.
+L'objet et le corps du message sont séparés par un saut de ligne.
+Des sauts de ligne additionels sont considérés comme faisant partie du corps.
+Eviter les caractères tels que `-`, `*` et `\` améliore la lisiblité.
 
-Characters like `-`, `*` and \` are elements that improve readability.
-
-### Avoid generic messages or messages without any context
+### Eviter les messages génériques ou sans aucun contexte
 
 ```
 # Mauvais
@@ -158,9 +157,9 @@ Change stuff
 Adjust css
 ```
 
-### Limit the number of columns
+### Limiter le nombre de colonnes
 
-[It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use a maximum of 50 characters for the subject and 72 for the body.
+[Il est recommandé](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) d'utiliser un maximum de 50 caractères pour le sujet, et 72 pour le corps.
 
 ### Garder la cohérence linguistique
 
