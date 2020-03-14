@@ -1,54 +1,33 @@
-# Commit messages guide
+# Commit mesajları kılavuzu
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/RomuloOliveira)
 
-A guide to understanding the importance of commit messages and how to write them well.
+Commit mesajlarının önemini ve onların nasıl daha iyi yazılacağını anlatan bu kılavuz; commitin ne olduğunu, iyi commit mesajları yazmanın neden önemli olduğunu, iyi bir commit geçmişi planlamaya ve (yeniden) yazmaya yönelik bir takım örnekleri ve ipuçlarını anlamanıza yardımcı olabilir.
 
-It may help you to learn what a commit is, why it is important to write good messages, best practices and some tips to plan and (re)write a good commit history.
+## "commit" nedir?
 
-## Available languages
+Basitçe, commit yerel deponuza yazılan dosyalarınızın anlık görüntüsüdür.
+Bazı insanların düşündüğünün aksine, [git sadece dosyalar arasındaki farkı saklamaz, tüm dosyaların tam sürümünü saklar](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+İki commit arasında değişmemiş dosyalar için, git zaten saklanan önceki özdeş dosyaya yalnızca bir bağlantı oluşturur.
 
-- [English](README.md)
-- [Português](README_pt-BR.md)
-- [Deutsch](README_de-DE.md)
-- [Español](README_es-AR.md)
-- [Italiano](README_it-IT.md)
-- [한국어](README_ko-KR.md)
-- [Русский](README_ru-RU.md)
-- [简体中文](README_zh-CN.md)
-- [日本語](README_ja-JP.md)
-- [Українська](README_ua-UA.md)
-- [Türkçe](README_tr-TR.md)
-- [ngôn ngữ tiếng Việt](README_vi-VN.md)
-- [繁體中文](README_zh-TW.md)
-- [ελληνικά](README_gr-GR.md)
-- [Française](README_fr-FR.md)
-- [پارسی](README_fa-IR.md)
-
-## What is a "commit"?
-
-In simple terms, a commit is a _snapshot_ of your local files, written in your local repository.
-Contrary to what some people think, [git doesn't store only the difference between the files, it stores a full version of all files](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
-For files that didn't change from one commit to another, git stores just a link to the previous identical file that is already stored.
-
-The image below shows how git stores data over time, in which each "Version" is a commit:
+Aşağıdaki resimde git'in, her "versiyon"da commit edildiği durumda, verileri nasıl sakladığı gösterilmektedir:
 
 ![](https://i.stack.imgur.com/AQ5TG.png)
 
-## Why are commit messages important?
+## Commit mesajları neden önemlidir?
 
-- To speed up and streamline code reviews
-- To help in the understanding of a change
-- To explain "the whys" that cannot be described only with code
-- To help future maintainers figure out why and how changes were made, making troubleshooting and debugging easier
+- Kod incelemelerini hızlandırır ve kolaylaştırır
+- Değişimin anlaşılmasına yardımcı olur
+- Sadece kodla açıklanamayan "neden"leri açıklar
+- Sonraki yazılımcıların, değişikliklerin neden ve nasıl yapıldığını anlamalarına yardımcı olur, sorun giderme ve hata ayıklamayı kolaylaştırır
 
-To maximize those outcomes, we can use some good practices and standards described in the next section.
+Bu faydaları en üst düzeye çıkarmak için, bir sonraki bölümde açıklanan bazı faydalı uygulamaları ve standartları kullanabiliriz.
 
-## Good practices
+## Faydalı uygulamalar
 
-These are some practices collected from my experiences, internet articles, and other guides. If you have others (or disagree with some) feel free to open a Pull Request and contribute.
+Bunlar; deneyimlerimden, internetteki makalelerden ve diğer kılavuzlardan toplanan bazı uygulamalardır. Eklemek istedikleriniz varsa (veya bazılarına katılmıyorsanız) bir Pull Request açmaktan ve katkıda bulunmaktan çekinmeyin.
 
-### Use imperative form
+### Emir kipi kullanın
 
 ```
 # Good
@@ -60,17 +39,17 @@ Use InventoryBackendPool to retrieve inventory backend
 Used InventoryBackendPool to retrieve inventory backend
 ```
 
-_But why use the imperative form?_
+_Ama neden emir kipi?_
 
-A commit message describes what the referenced change actually **does**, its effects, not what was done.
+Bir commit mesajı belirtilen değişikliğin gerçekte ne yaptığını ve etkilerini açıklar, ne yapıldığını değil.
 
-[This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages in imperative form:
+[Chris Beams'in bu muhteşem makalesi](https://chris.beams.io/posts/git-commit/) bize emir kipinde daha iyi commit mesajları yazmamıza yardımcı olabilecek basit bir cümle veriyor:
 
 ```
 If applied, this commit will <commit message>
 ```
 
-Examples:
+Örnekler:
 
 ```
 # Good
@@ -82,7 +61,7 @@ If applied, this commit will use InventoryBackendPool to retrieve inventory back
 If applied, this commit will used InventoryBackendPool to retrieve inventory backend
 ```
 
-### Capitalize the first letter
+### Büyük harfle başlayın
 
 ```
 # Good
@@ -94,17 +73,15 @@ Add `use` method to Credit model
 add `use` method to Credit model
 ```
 
-The reason that the first letter should be capitalized is to follow the grammar rule of using capital letters at the beginning of sentences.
+Büyük harfle başlanmasının nedeni, dil bilgisi kurallarından biri olan cümlelerin başında büyük harf kullanılması kuralına uymaktır.
 
-The use of this practice may vary from person to person, team to team, or even from language to language.
-Capitalized or not, an important point is to stick to a single standard and follow it.
+Bu uygulamanın kullanımı kişiden kişiye, takımdan takıma, hatta dilden dile değişebilir. Büyük harfle veya değil, önemli olan nokta tek bir standarda sadık kalmak ve onu takip etmektir.
 
-### Try to communicate what the change does without having to look at the source code
+### Kaynak koda bakmak zorunda kalmadan değişikliğin ne yaptığını bildirmeye çalışın
 
 ```
 # Good
 Add `use` method to Credit model
-
 ```
 
 ```
@@ -122,9 +99,9 @@ Increase left padding between textbox and layout frame
 Adjust css
 ```
 
-It is useful in many scenarios (e.g. multiple commits, several changes and refactors) to help reviewers understand what the committer was thinking.
+Bu uygulama mesajı okuyanların, commit edenin ne düşündüğünü anlamalarına yardımcı olmak adına birçok senaryoda (_örneğin çoklu commit'ler, çeşitli değişiklikler ve yeniden düzenlemeler_) faydalıdır.
 
-### Use the message body to explain "why", "for what", "how" and additional details
+### "Neden?", "Ne amaçla?", "Nasıl?"ı ve ek detayları açıklamak için mesaj gövdesini kullanın
 
 ```
 # Good
@@ -156,12 +133,12 @@ Change from namedtuple to class because we need to
 setup a new attribute (in_use_amount) with a new value
 ```
 
-The subject and the body of the messages are separated by a blank line.
-Additional blank lines are considered as a part of the message body.
+Mesajların konusu ve gövdesi boş bir satırla ayrılır.
+Ek boş satırlar mesaj gövdesinin bir parçası olarak kabul edilir.
 
-Characters like `-`, `*` and \` are elements that improve readability.
+`-`, `*` ve  \` gibi karakterler okunabilirliği artıran öğelerdir.
 
-### Avoid generic messages or messages without any context
+### Herhangi bir bağlamı olmayan mesajlardan ve genel mesajlardan kaçının
 
 ```
 # Bad
@@ -176,15 +153,15 @@ Change stuff
 Adjust css
 ```
 
-### Limit the number of characters
+### Karakter sayısını sınırlayın
 
-[It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use a maximum of 50 characters for the subject and 72 for the body.
+Konu için en fazla 50 karakter ve gövde için 72 karakter kullanılması [önerilir](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines).
 
-### Keep language consistency
+### Dil tutarlılığını koruyun
 
-For project owners: Choose a language and write all commit messages using that language. Ideally, it should match the code comments, default translation locale (for localized projects), etc.
+Proje sahipleri için: Bir dil seçin ve tüm commit mesajlarını bu dili kullanarak yazın. İdeal olarak, kod yorumları, varsayılan yerel çeviri ayarları (yerelleştirilmiş projeler için) vb. ile eşleşmelidir.
 
-For contributors: Write your commit messages using the same language as the existing commit history.
+Katkıda bulunanlar için: Var olan commit geçmişiyle aynı dili kullanarak commit mesajı yazın.
 
 ```
 # Good
@@ -194,22 +171,22 @@ bebebe Fix method name of InventoryBackend child classes
 ```
 
 ```
-# Good (Portuguese example)
+# Good (Portekizce örneği)
 ababab Adiciona o método `use` ao model Credit
 efefef Usa o InventoryBackendPool para recuperar o backend de estoque
 bebebe Corrige nome de método na classe InventoryBackend
 ```
 
 ```
-# Bad (mixes English and Portuguese)
+# Bad (İngilizce ve Portekizce karışık)
 ababab Usa o InventoryBackendPool para recuperar o backend de estoque
 efefef Add `use` method to Credit model
 cdcdcd Agora vai
 ```
 
-### Template
+### Şablon
 
-This is a template, [written originally by Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html), which appears in the [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
+Bu şablonun orjinali [Tim Pope](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) tarafından yazıldı; [_Pro Git Book_](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project).
 
 ```
 Summarize changes in around 50 characters or less
@@ -243,51 +220,50 @@ See also: #456, #789
 
 ## Rebase vs. Merge
 
-This section is a **TL;DR** of Atlassian's excellent tutorial, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+Bu kısım Atlassian'ın ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) başlıklı harika eğitiminin bir TL;DR'si(Too long; didn't read/Çok uzundu; okumadım), özetidir.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
 ### Rebase
 
-**TL;DR:** Applies your branch commits, one by one, upon the base branch, generating a new tree.
+**TL;DR:** Branch commitlerinizi ana branchin devamına yeni bir ağaç oluşturacak şekilde tek tek uygular.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=hq)
 
-### Merge
+### Birleştirme
 
-**TL;DR:** Creates a new commit, called (appropriately) a _merge commit_, with the differences between the two branches.
+**TL;DR:** _merge commit_ olarak adlandırılan ve iki branch arasında farklardan oluşan yeni bir commit oluşturur.
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=hq)
 
-### Why do some people prefer to rebase over merge?
+### Neden bazı kişiler merge yerine rebase tercih eder?
 
-I particularly prefer to rebase over merge. The reasons include:
+Ben şahsen merge yerine rebase'i tercih ediyorum. Sebepleri ise şu şekilde:
 
-* It generates a "clean" history, without unnecessary merge commits
-* _What you see is what you get_, i.e., in a code review all changes come from a specific and entitled commit, avoiding changes hidden in merge commits
-* More merges are resolved by the committer, and every merge change is in a commit with a proper message
-    * It's unusual to dig in and review merge commits, so avoiding them ensures all changes have a commit where they belong
+* Gereksiz bir _merge commit_'i olmadan "temiz" bir geçmiş oluşturur.
+* _Gördüğünüz şey, elde ettiğiniz şeydir_, yani bir kod incelemesinde, merge commit'inin ardında gizlenen değişikliklerden kaçınarak, tüm değişiklikler belirli ve başlıklı bir commit'ten gelir.
+* Daha fazla merge, commit eden tarafından çözümlenir ve her bir merge işlemi uygun bir mesajla bir commit içindedir.
+    * Bir birleştirme commit'ini detaylı incelemek ve gözden geçirmek olağandışı bir durumdur, bu nedenle bunlardan kaçınmak tüm değişikliklerin ait oldukları bir commit'e sahip olmasını garanti eder.
 
-### When to squash
+### Ne zaman squash (ezme/birleştirme) yapılmalı?
 
-"Squashing" is the process of taking a series of commits and condensing them into a single commit.
+"Squashing" bir dizi commit'i alıp tek bir commit'e yoğunlaştırma işlemidir.
 
-It's useful in several situations, e.g.:
+Bazı durumlarda faydalıdır, örneğin:
 
-- Reducing commits with little or no context (typo corrections, formatting, forgotten stuff)
-- Joining separate changes that make more sense when applied together
-- Rewriting _work in progress_ commits
+- Çok az ya da hiç bağlam olmadan commit'i azaltmak (yazım hatası düzeltmeleri, biçimlendirme, unutulmuş şeyler)
+- Birlikte uygulandığında daha anlamlı hale gelen ayrı değişiklikleri birleştirme
+- Üzerinde çalışılmaya devam edilen commit'leri yeniden yazma
 
-### When to avoid rebase or squash?
+### Rebase veya squash'dan ne zaman kaçınmalı?
 
-Avoid rebase and squash in public commits or in shared branches where multiple people work on.
-Rebase and squash rewrite history and overwrite existing commits, doing it on commits that are on shared branches (i.e., commits pushed to a remote repository or that comes from others branches) can cause confusion and people may lose their changes (both locally and remotely) because of divergent trees and conflicts.
+_Public commit_'te veya birden fazla kişinin çalıştığı, paylaşılan branchlerde rebase ve squash'den kaçının. Rebase ve squash geçmişi yeniden yazar ve var olan commit'lerin üzerine yazar, bunu paylaşılan branchlerde yapmak karşıklığa (örn., uzaktaki bir depoya push edilen/gönderilen commitler veya diğer branch/dallardan gelen commitler) neden olabilir ve insanlar farklı branchler ve çakışmalar nedeniyle değişikliklerini (hem yerel hem de uzaktan) kaybedebilir.
 
-## Useful git commands
+## Kullanışlı git komutları
 
 ### rebase -i
 
-Use it to squash commits, edit messages, rewrite/delete/reorder commits, etc.
+Commitleri squash/sıkıştırmak, mesajları düzenlemek, commitleri yeniden yazmak/silmek/sıralarını düzenlemek vb. için kullanın.
 
 ```
 pick 002a7cc Improve description and update document title
@@ -328,14 +304,14 @@ pick 9b81c72 Add "Rebase vs Merge" section
 
 #### fixup
 
-Use it to clean up commits easily and without needing a more complex rebase.
-[This article](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html) has very good examples of how and when to do it.
+Commitleri kolayca ve daha karmaşık bir rebase'e ihtiyaç duymadan temizlemek için kullanın.
+[Bu yazıda](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html), nasıl ve ne zaman yapılacağına dair güzel örnekler mevcut.
 
 ### cherry-pick
 
-It is very useful to apply that commit you made on the wrong branch, without the need to code it again.
+Yanlış bir branch üzerinde yaptığınız commit'i tekrar kodlamaya gerek kalmadan uygulamak gerektiğinde çok kullanışlıdır.
 
-Example:
+Örnek:
 
 ```
 $ git cherry-pick 790ab21
@@ -346,7 +322,7 @@ $ git cherry-pick 790ab21
 
 ### add/checkout/reset [--patch | -p]
 
-Let's say we have the following diff:
+Diyelim ki aşağıdaki gibi bir _diff_'imiz var:
 
 ```diff
 diff --git a/README.md b/README.md
@@ -357,7 +333,7 @@ index 7b45277..6b1993c 100644
  ``
  # Bad (mixes English and Portuguese)
  ababab Usa o InventoryBackendPool para recuperar o backend de estoque
--efefef Add `use` method to Credit model
+-efefef Credit modeline `use` metodu ekle
  cdcdcd Agora vai
  ``
 
@@ -375,8 +351,8 @@ index 7b45277..6b1993c 100644
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-We can use `git add -p` to add only the patches we want to, without the need to change the code that is already written.
-It's useful to split a big change into smaller commits or to reset/checkout specific changes.
+Zaten yazılmış olan kodu değiştirmeye gerek kalmadan, yalnızca istediğimiz yamaları eklemek için `git add-p`'yi kullanabiliriz.
+Büyük bir değişikliği daha küçük commitlere bölmek veya belirli değişiklikleri sıfırlamak/kontrol etmek açısından yararlıdır.
 
 ```
 Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]? s
@@ -390,7 +366,7 @@ Split into 2 hunks.
  ``
  # Bad (mixes English and Portuguese)
  ababab Usa o InventoryBackendPool para recuperar o backend de estoque
--efefef Add `use` method to Credit model
+-efefef Credit modeline `use` metodu ekle
  cdcdcd Agora vai
  ``
 
@@ -426,25 +402,25 @@ Stage this hunk [y,n,q,a,d,/,K,j,J,g,e,?]?
 +- [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 ```
 
-## Other interesting stuff
+## Diğer ilginç bağlantılar
 
 - https://whatthecommit.com/
 - https://gitmoji.carloscuesta.me/
 
-## Like it?
+## Beğendin mi?
 
-[Say thanks!](https://saythanks.io/to/RomuloOliveira)
+[Teşekkür Et!](https://saythanks.io/to/RomuloOliveira)
 
-## Contributing
+## Katkıda bulunma
 
-Any kind of help would be appreciated. Example of topics that you can help me with:
+Her türlü yardım makbule geçecektir. Bana yardımcı olabileceğiniz örnek konular:
 
-- Grammar and spelling corrections
-- Translation to other languages
-- Improvement of source referencing
-- Incorrect or incomplete information
+- Dil bilgisi ve imlâ düzeltmeleri
+- Diğer dillere çeviri
+- Kaynak/referans iyileştirme
+- Yanlış veya eksik bilgiyi düzeltme
 
-## Inspirations, sources and further reading
+## İlham alınanlar, kaynaklar ve ileri okuma
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Pro Git Book - Commit guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)

@@ -17,7 +17,7 @@ In special, I'd like to highlight and bring attention to help in the form of:
 - Pull request reviews
 - Translation to other languages
 
-## Tenets
+## Principles
 
 - **Consistency across languages over 100% correct grammar/spelling**: It's better to have some grammar and spelling errors than having outdated or specialized content for a single language. Use Google Translate or similar tools when needed.
 - **Best practices in this guide should aim to help, not to set rule-following blindly standards**: It's intended to provide resourceful guidelines to help people communicate in a better, concise and clear way. It's a mean to an end, not the end itself.
