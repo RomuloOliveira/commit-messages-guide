@@ -215,7 +215,7 @@ Les autres paragraphes viennent après les lignes vides.
 Si vous utilisez un outil de suivi des problèmes,
 mettez les références à la fin comme ceci:
 
-Resolves: #123
+Résout: #123
 Voir aussi: #456, #789
 ```
 
