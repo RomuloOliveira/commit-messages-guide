@@ -9,7 +9,7 @@ Cela pourrait vous aider à comprendre ce qu'un commit est, pourquoi c'est impor
 ## Qu'est-ce qu'un "commit" ?
 
 Dans des termes simples, un commit est une _sauvegarde_ de vos fichiers locaux, écrits dans votre dépôt local.
-Contrairement à ce que certaines personnes pensent, [git ne stocke pas seulement la différence entre ces fichiers, il stocke une version complète de tous les fichiers](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Contrairement à ce que certaines personnes pensent, [git ne stocke pas seulement la différence entre ces fichiers, il stocke une version complète de tous les fichiers](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences).
 Pour les fichiers qui ne changent pas d'un commit à l'autre, git stocke juste un lien vers la version précédente identique qui est déjà stockée.
 
 L'image ci-dessous montre comment git stocke les fichiers à travers le temps, dans quelle "Version" est un commit.

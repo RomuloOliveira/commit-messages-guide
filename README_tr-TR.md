@@ -7,7 +7,7 @@ Commit mesajlarının önemini ve onların nasıl daha iyi yazılacağını anla
 ## "commit" nedir?
 
 Basitçe, commit yerel deponuza yazılan dosyalarınızın anlık görüntüsüdür.
-Bazı insanların düşündüğünün aksine, [git sadece dosyalar arasındaki farkı saklamaz, tüm dosyaların tam sürümünü saklar](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Bazı insanların düşündüğünün aksine, [git sadece dosyalar arasındaki farkı saklamaz, tüm dosyaların tam sürümünü saklar](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences).
 İki commit arasında değişmemiş dosyalar için, git zaten saklanan önceki özdeş dosyaya yalnızca bir bağlantı oluşturur.
 
 Aşağıdaki resimde git'in, her "versiyon"da commit edildiği durumda, verileri nasıl sakladığı gösterilmektedir:

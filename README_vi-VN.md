@@ -9,7 +9,7 @@
 ## "Commit" là gì?
 
 Hãy nghĩ đơn giản, một commit là một _ảnh_ (hoặc bản sao) của những file cục bộ trên kho lưu trữ cá nhân của bạn.
-Khác với suy nghĩ của nhiều người, [git không chỉ lưu những khác biệt giữa các phiên bản của file mà lưu trữ toàn bộ các phiên bản](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Khác với suy nghĩ của nhiều người, [git không chỉ lưu những khác biệt giữa các phiên bản của file mà lưu trữ toàn bộ các phiên bản](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences).
 Đối với những file không có sự thay đổi so với phiên commit trước, thay vì lưu một file mới, việc git làm đơn giản sẽ là lưu trữ một link trỏ tới file đã được lưu trước đó.
 
 Hình sau mô tả cách mà git lưu trữ dữ liệu theo thời gian, trong đó mỗi một "phiên bản" là một commit:

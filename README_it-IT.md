@@ -9,7 +9,7 @@ Potrebbe aiutarti a capire cos'è un commit, perché è importante scrivere buon
 ## Cos'è un "commit"?
 
 In termini semplici, un commit è una _fotografia_ dei file locali, scritti nel repository locale.
-Contrariamente a cosa pensano alcune persone, [git non memorizza solo le differenze tra i file, ma la versione completa di tutti i file](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Contrariamente a cosa pensano alcune persone, [git non memorizza solo le differenze tra i file, ma la versione completa di tutti i file](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences).
 Per i file che non cambiano tra un commit e l'altro, git memorizza solo un link al file identico precedente che è già memorizzato.
 
 L'immagine qui sotto mostra come git memorizza i dati nel tempo, nella quale ogni "Version" è un commit:
