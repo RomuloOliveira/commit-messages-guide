@@ -8,7 +8,7 @@
 
 ## 什麼是“commit”？
 
-簡單來說，commit 就是在本地資料庫中撰寫的檔案的 _快照_。與印象中不同的是，[git 不僅儲存不同版本檔案之間的差異，還儲存了所有檔案的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。對於兩個 commit 之間沒有被修改的檔案，git 只儲存指向前一個完全相同的檔案的連結。
+簡單來說，commit 就是在本地資料庫中撰寫的檔案的 _快照_。與印象中不同的是，[git 不僅儲存不同版本檔案之間的差異，還儲存了所有檔案的完整版本](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences)。對於兩個 commit 之間沒有被修改的檔案，git 只儲存指向前一個完全相同的檔案的連結。
 
 下面的圖片展示了 git 如何隨著時間儲存資料，其中每個 “Version” 都是一個 commit：
 

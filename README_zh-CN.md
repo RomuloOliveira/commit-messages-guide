@@ -8,7 +8,7 @@
 
 ## 什么是“commit”？
 
-简单来讲，commit 就是在本地存储库中编写的文件的 _快照_。与印象中不同的是，[git 不仅存储不同版本文件之间的差异，还存储了所有文件的完整版本](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences)。对于两个 commit 之间没有被修改的文件，git 只存储指向前一个完全相同的文件的链接。
+简单来讲，commit 就是在本地存储库中编写的文件的 _快照_。与印象中不同的是，[git 不仅存储不同版本文件之间的差异，还存储了所有文件的完整版本](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences)。对于两个 commit 之间没有被修改的文件，git 只存储指向前一个完全相同的文件的链接。
 
 下面的图片展示了 git 如何随着时间存储数据，其中每个 “Version” 都是一个 commit：
 

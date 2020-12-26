@@ -28,7 +28,7 @@ It may help you to learn what a commit is, why it is important to write good mes
 ## What is a "commit"?
 
 In simple terms, a commit is a _snapshot_ of your local files, written in your local repository.
-Contrary to what some people think, [git doesn't store only the difference between the files, it stores a full version of all files](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Contrary to what some people think, [git doesn't store only the difference between the files, it stores a full version of all files](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences).
 For files that didn't change from one commit to another, git stores just a link to the previous identical file that is already stored.
 
 The image below shows how git stores data over time, in which each "Version" is a commit:

@@ -13,7 +13,7 @@ Auch wenn dies eine Übersetzung darstellen soll, empfiehlt es sich, alle Commit
 ## Was ist ein "Commit"?
 
 Ganz einfach beschrieben ist ein Commit eine Art _Schnappschuss_ deiner lokalen Dateien in deinem Repository (dein Projektordner).
-Im Gegensatz zur geläufigen Annahme [speichert Git nicht nur die Unterschiede in den Dateien, sondern immer die gesamte Datei (Quelle auf Englisch)](https://git-scm.com/book/eo/v1/Ekkomenci-Git-Basics#Snapshots,-Not-Differences).
+Im Gegensatz zur geläufigen Annahme [speichert Git nicht nur die Unterschiede in den Dateien, sondern immer die gesamte Datei (Quelle auf Englisch)](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F#_snapshots_not_differences).
 Für Dateien, die sich von einem auf den anderen Commit nicht geändert haben, speichert Git lediglich einen Link zur einer bereits gespeicherten Version in einem vorangegangenen Commit.
 
 Die folgende Grafik zeigt wie Git die Daten mit der Zeit speichert. Jede "Version" meint hier einen Commit.
