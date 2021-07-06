@@ -132,7 +132,7 @@ Pomoże Ci to w wielu przypadkach (np. wyszukiwanie danej zmiany w kilku commita
 ### Użyj ciała wiadomości, aby wyjaśnić „dlaczego”, „po co” i „jak”
 
 ```
-# GoodDobrze
+# Dobrze
 Fix method name of InventoryBackend child classes
 
 Classes derived from InventoryBackend were not
