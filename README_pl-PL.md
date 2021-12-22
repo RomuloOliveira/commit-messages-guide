@@ -254,7 +254,7 @@ Podsumuj zmiany w około 50 znakach lub mniej
 W razie potrzeby bardziej szczegółowy tekst objaśniający zmieść w 72 znakach.
 W niektórych commitach pierwsza linia jest traktowana jako
 temat commitu, a reszta tekstu jako jego treść.
-pusta linia oddzielająca głowę od ciała jest bardzo ważna (chyba żecałkowicie pomijasz ciało);
+pusta linia oddzielająca głowę od ciała jest bardzo ważna (chyba że całkowicie pomijasz ciało);
 
 Wyjaśnij problem, który rozwiązuje commit. Skoncentruj się na tym, dlaczego
 wprowadzasz tę zmianę, a nie na tym jak (kod to wyjaśni).
