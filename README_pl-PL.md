@@ -300,7 +300,7 @@ Ja wolę zmianę bazy. Powodami są:
 - _What you see is what you get_, (otrzymujesz to co widzisz), to znaczy wszystkie zmiany pochodzą z konkretnych i nazwanych commitów, unikamy zmian wprowadznych w merge commitach.
 - Każdy commit jest z odpowiednią wiadomością, a my nie musimy potem kopać w zmianach, które wystąpiły przy scalaniu.
 
-### Kiedu squashować
+### Kiedy squashować
 
 "Squashing" to proces zbierania serii commitów i kondensowaniu ich w jednym commicie. Czyli polega na "zgnieceniu" kilku commitów w jeden.
 
