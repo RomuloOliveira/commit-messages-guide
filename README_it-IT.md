@@ -45,30 +45,6 @@ _Ma perché usare la forma imperativa?_
 
 Un messaggio di commit descrive cosa fa il cambiamento (a cui fa riferimento), i suoi effetti,, non cosa è stato fatto.
 
-[Questo ottimo articolo di Chris Beams](https://chris.beams.io/posts/git-commit/) fornisce una semplice frase che può essere usata per aiutarci a scrivere messaggi di commit in modo imperativo in modo Inglese. Riadattato alla sintassi Italiana:
-
-```
-Questo commit <messaggio di commit in forma presente>
-```
-
-oppure
-
-```
-Se applicato, questo commit <messaggio di commit in forma presente>
-```
-
-Esempi:
-
-```
-# Corretto
-Se applicato, questo commit usa InventoryBackendPool per recuperare il backend dell'inventario
-```
-
-```
-# Errato
-Se applicato, questo commit usato InventoryBackendPool per recuperare il backend dell'inventario
-```
-
 ### La prima lettera in maiuscolo
 
 ```

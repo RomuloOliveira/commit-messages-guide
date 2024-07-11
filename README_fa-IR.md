@@ -64,24 +64,6 @@ _اما چرا ما شکل دستوری را استفاده میکنیم?_
 &#x202b;
 یک Commit-Message درواقع آن چیزی راکه تغییرات انجام میدهد یا تاثیر آن را توضیح میدهد نه چیزی که انجام شده است
 
-&#x202b;
-[این مقاله جالب توسط Chris Beams](https://chris.beams.io/posts/git-commit/) بوسیله جملات ساده به ما درنوشتن شکل دستوری Commit-Message کمک خواهد کرد:
-
-```
-If applied, this commit will <commit message>
-```
-
-مثال:
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
 
 ### حرف اول با حروف بزرگ
 

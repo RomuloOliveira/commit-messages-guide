@@ -45,25 +45,6 @@ _Pourquoi l'impératif ?_
 
 Un message de commit décrit ce que le changement **fait**, ces effets, pas ce qui à été fait.
 
-[Cet excellent article de Chris Beams](https://chris.beams.io/posts/git-commit/)
-Nous donne une phrase simple qui peut être utilisée pour mieux écrire les messages de commit à l'impératif.
-
-```
-If applied, this commit will <commit message>
-```
-
-Exemples:
-
-```
-# Bon
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Mauvais
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### Mettre une majuscule au début de la phrase
 
 ```

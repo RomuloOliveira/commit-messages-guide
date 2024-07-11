@@ -42,22 +42,6 @@ Por que!?
 
 A mensagem de _commit_ diz o que ele **faz**, não o que foi feito.
 
-Regrinha de ouro para mensagens:
-
-```
-If applied, this commit will: <commit message>
-```
-
-```
-# Good
-If applied, this commit will: Use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will: Used InventoryBackendPool to retrieve inventory backend
-```
-
 ### Primeira letra em maiúsculo
 
 ```

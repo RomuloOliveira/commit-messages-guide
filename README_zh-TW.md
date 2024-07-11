@@ -45,27 +45,6 @@ _不過為什麼要使用祈使句呢？_
 
 commit 訊息描述的效果是這個變更實際上**做**了什麼，而不是被做了什麼。
 
-[Chris Beams 的這篇好文](https://chris.beams.io/posts/git-commit/)為我們提供了一些簡單的句子，可以幫助我們用祈使句寫出更好的 commit 訊息：
-
-```
-If applied, this commit will <commit message>
-如果通過，這個 commit 將會 <commit 訊息>
-```
-
-例子：
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-如果通過，這個 commit 將使用 InventoryBackendPool 獲取庫存
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-如果通過，InventoryBackendPool 將會被用在獲取庫取
-```
-
 ### 第一個字母大寫
 
 ```
