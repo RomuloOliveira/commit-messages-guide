@@ -49,24 +49,6 @@ _Warum soll ich den Imperativ benutzen?_
 
 Eine Commit-Message beschreibt was die Änderung tatsächlich **tut** – ihre Auswirkungen – nicht was vorher war.
 
-[Dieser sehr gute Artikel von Chris Beams (Quelle auf Englisch)](https://chris.beams.io/posts/git-commit/) gibt uns einen simplen Satzbau vor, dieser hilft dabei bessere Commit-Messages im imperativ zu schreiben:
-
-```
-If applied, this commit will: <commit message>
-```
-
-Beispiel:
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### Große Anfangsbuchstaben
 
 ```

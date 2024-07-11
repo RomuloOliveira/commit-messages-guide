@@ -43,24 +43,6 @@ _Ama neden emir kipi?_
 
 Bir commit mesajı belirtilen değişikliğin gerçekte ne yaptığını ve etkilerini açıklar, ne yapıldığını değil.
 
-[Chris Beams'in bu muhteşem makalesi](https://chris.beams.io/posts/git-commit/) bize emir kipinde daha iyi commit mesajları yazmamıza yardımcı olabilecek basit bir cümle veriyor:
-
-```
-If applied, this commit will <commit message>
-```
-
-Örnekler:
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### Büyük harfle başlayın
 
 ```

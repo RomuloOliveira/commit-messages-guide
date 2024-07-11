@@ -47,24 +47,6 @@ _しかし、なぜ命令法を使うべきなのでしょうか?_
 
 コミットメッセージは、関連付けられる変更が実際に何を*する*のか、どんな効果を持つのかを説明するものであり、何がされたのかを説明するものではありません。
 
-[Chris Beamsによるこの優れた記事](https://chris.beams.io/posts/git-commit/)では、命令形でより良いコミットメッセージを書くのに助けとなるシンプルな例文が示されています。
-
-```
-If applied, this commit will <コミットメッセージ>
-```
-
-例:
-
-```
-# 良い例
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# 悪い例
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### 最初の文字を大文字にする
 
 ```

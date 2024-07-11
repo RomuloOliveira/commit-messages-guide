@@ -70,24 +70,6 @@ _Ale po co używać trybu rozkazującego?_
 
 commit message opisuje co zmiana aktualnie **robi**. Chodzi o zmiany w kodzie, a nie o to co zostało zrobione.
 
-[Ten artykuł od Chrisa Beams](https://chris.beams.io/posts/git-commit/) zawiera proste zdanie, które może nam pomóc w pisaniu lepszych komunikatów w trybie rozkazującym:
-
-```
-If applied, this commit will <commit message>
-```
-
-Examples:
-
-```
-# Dobrze
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Żle
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### Zacznij z dużej litery
 
 ```

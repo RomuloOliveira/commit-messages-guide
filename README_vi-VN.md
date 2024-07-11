@@ -45,24 +45,6 @@ _Nhưng tại sao phải dùng thể mệnh lệnh?_
 
 Một commit message mô tả các thay đổi này thực sự **làm** những gì, tác động của nó, chứ không phải nói về những việc đã được thực hiện.
 
-[Bài báo tuyệt vời của Chris Beams](https://chris.beams.io/posts/git-commit/) cung cúp cho chúng ta một mẫu câu đơn giản mà ta có thể dùng, giúp chúng ta viết commit message tốt hơn ở thể mệnh lệnh:
-
-```
-If applied, this commit will <commit message>
-```
-
-Ví dụ:
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### Viết hoa chữ cái đầu
 
 ```

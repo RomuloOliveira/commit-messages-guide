@@ -65,23 +65,6 @@ _But why use the imperative form?_
 
 A commit message describes what the referenced change actually **does**, its effects, not what was done.
 
-[This excellent article from Chris Beams](https://chris.beams.io/posts/git-commit/) gives us a simple sentence that can be used to help us write better commit messages in imperative form:
-
-```
-If applied, this commit will <commit message>
-```
-
-Examples:
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
 
 ### Capitalize the first letter
 

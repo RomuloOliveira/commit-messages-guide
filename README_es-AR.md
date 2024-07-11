@@ -45,23 +45,6 @@ _¿Pero por qué usar forma imperativa?_
 
 Un mensaje de commit describe qué **hace** el cambio referenciado, su efecto, no qué se hizo.
 
-[Este excelente artículo de Chris Beans](https://chris.beams.io/posts/git-commit/) nos da deja una idea que podemos usar como ayuda para escribir mensajes de commit en forma imperativa:
-
-```
-If applied, this commit will <commit message>
-```
-
-Ejemplo:
-
-```
-# Good
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# Bad
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
 
 ### Primera letra en mayúscula
 

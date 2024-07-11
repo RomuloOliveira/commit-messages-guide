@@ -49,30 +49,6 @@ _근데 왜 명령조를 쓰나요?_
 
 커밋 메시지는 무엇이 변경되었는지가 아니라 실제로 그 변경 사항이 미치는 영향, 즉 변경 사항이 실질적으로 무엇을 하는지 설명합니다.
 
-[Chris Beams이 작성한 이 멋진 글](https://chris.beams.io/posts/git-commit/)이 더 나은 커밋 메시지를 명령조로 작성할 때 사용할 수 있는 간단한 문장 하나를 제시합니다:
-
-```
-적용 시, 이 커밋은 <커밋 메시지> 합니다
----
-If applied, this commit will <commit message>
-```
-
-예시:
-
-```
-# 좋음
-적용 시, InventoryBackendPool을 사용하여 재고 백엔드를 검색합니다
----
-If applied, this commit will use InventoryBackendPool to retrieve inventory backend
-```
-
-```
-# 나쁨
-적용 시, InventoryBackendPool을 사용하여 재고 백엔드를 검색했습니다
----
-If applied, this commit will used InventoryBackendPool to retrieve inventory backend
-```
-
 ### 첫 번째 문자를 대문자로 시작하기
 
 ```
