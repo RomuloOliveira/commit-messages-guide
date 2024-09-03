@@ -78,7 +78,7 @@ Add `use` method
 ```
 
 ```
-# 悪い例
+# 良い例
 Increase left padding between textbox and layout frame
 ```
 
