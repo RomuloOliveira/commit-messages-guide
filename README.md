@@ -164,6 +164,10 @@ Change stuff
 Adjust css
 ```
 
+### Avoid language such as "this PR", "this commit", "this patch"
+
+You don't have to refer to the commit by itself. We **know** that this is a patch, commit or PR.
+
 ### Limit the number of characters
 
 [It's recommended](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines) to use a maximum of 50 characters for the subject and 72 for the body.
