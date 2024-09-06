@@ -287,6 +287,48 @@ letter sent on the Linux kernel mailing list. It contains:
 - Possible enhancements, a section describing opportunities for future changes that are out of the scope
   for the current commit set;
 
+## Signing off your commits and following guidelines
+
+Open source projects often require you to sign your code and follow some guidelines. One such example is
+the Developer Certificate of Origin (DCO)[https://developercertificate.org/], which you have to abide to
+when contributing to projects by The Linux Foundation, the Cloud Native Computing Foundation and many
+others.
+
+This means that you have to use your **real name** (i.e. a name that identifies you, _not necessarily your
+legal name_) and to sign off your commits. Avoid pseudonyms or false names. Further reading about real names
+[here](https://www.mail-archive.com/kernelnewbies@kernelnewbies.org/msg22178.html).
+
+Use `git config` to set your name and email.
+
+``` sh
+# You can apply these changes locally, to a single repo
+git config --local user.name "Jane Doe"
+git config --local user.email "janedoe@janedoe.com"
+
+# Or globally
+git config --global user.name "Jane Doe"
+git config --global user.email "janedoe@janedoe.com"
+```
+
+When doing a commit, add the `-s` flag to `git commit` and that will add a `Signed-off-by: ` line to your
+commit.
+
+Aside from adding this line to the commit, it's also important to use GPG for signing your commits.
+
+GPG, or GNU Privacy Guard, is a tool that allows you to encrypt and tamperproof documents. You can use it,
+for example, to sign emails and ensure that they haven't been modified without your consent. In the git
+world, this is how you tell that a commit has been made by you and has not been tampered before reaching
+other people.
+
+Github has more [information](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
+about how to generate and add a GPG key to your account. [This documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)
+teaches how to use gpgsign for commits.
+
+More information about working with GPG [here](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work).
+
+For even more security, you can setup [pinentry](https://www.gnupg.org/related_software/pinentry/index.html)
+to add physical layers of security to GPG, such as signing your commits with Yubikey of Touch ID.
+
 ## Rebase vs. Merge
 
 This section is a **TL;DR** of Atlassian's excellent tutorial, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
