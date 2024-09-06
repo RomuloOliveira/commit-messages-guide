@@ -247,6 +247,20 @@ Resolves: #123
 See also: #456, #789
 ```
 
+## Notes on PR messages and cover letters
+
+Most developers open Pull Requests (PR) on a Git repo through a platform (Github, Gitlab),
+while kernel developers  and people who send patches through email ([yes, that's a
+thing](https://git-scm.com/docs/git-send-email/2.45.0) refer to it as "cover letter".
+
+A good cover letter, or PR message, will summarize, give background and context to a series of
+commits that are related. Good writing on this part will help to "sell" your commit series to
+the maintainers of a project, as they'll be able to understand why you are presenting such changes
+together.
+
+If you're writing a smaller (single or a few commits) change, treat the first commit as a cover letter.
+Github, for example, uses this first commit as the default PR message.
+
 ## Rebase vs. Merge
 
 This section is a **TL;DR** of Atlassian's excellent tutorial, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
