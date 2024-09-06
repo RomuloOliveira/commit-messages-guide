@@ -110,6 +110,10 @@ It is useful in many scenarios (e.g. multiple commits, several changes and refac
 
 ### Use the message body to explain "why", "for what", "how" and additional details
 
+Focus on the "why" instead of "what" (although "what" and "how" are still important).
+If, for example, your commit message is a restatement of the diff, it may be important to
+rethink it.
+
 ```
 # Good
 Fix method name of InventoryBackend child classes
@@ -435,3 +439,5 @@ Any kind of help would be appreciated. Example of topics that you can help me wi
 - [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 - [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 - [Pro Git Book - Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+- [Philosophy of Linux kernel patches](https://kernelnewbies.org/PatchPhilosophy)
+- [The perfect patch](https://www.ozlabs.org/~akpm/stuff/tpp.txt)
