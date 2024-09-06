@@ -261,6 +261,20 @@ together.
 If you're writing a smaller (single or a few commits) change, treat the first commit as a cover letter.
 Github, for example, uses this first commit as the default PR message.
 
+Here's an [example](https://lore.kernel.org/lkml/20230414225551.858160935@linutronix.de/) of a good cover
+letter sent on the Linux kernel mailing list. It contains:
+
+- A description of the overall changes and why they were made;
+
+- Background, or any important information that is needed to understand these changes;
+
+- A breakdown of the solution and the approach taken to reach such solution;
+
+- Caveats, or things that could go wrong and must be considered before applying such changes;
+
+- Possible enhancements, a section describing opportunities for future changes that are out of the scope
+  for the current commit set;
+
 ## Rebase vs. Merge
 
 This section is a **TL;DR** of Atlassian's excellent tutorial, ["Merging vs. Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
