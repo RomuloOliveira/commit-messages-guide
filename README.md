@@ -170,7 +170,6 @@ You don't have to refer to the commit by itself. We **know** that this is a patc
 
 ```
 # Bad
-
 This commit does x and y...
 
 This PR does x and y...
@@ -180,6 +179,19 @@ This Patch x and y...
 # Good
 
 X and y are done...
+```
+
+### Avoid personal language (e.g. pronouns)
+
+A thing that can be learned from academic writing and brought to commit messages is to avoid using personal
+language.
+
+```
+# Bad
+I fixed the problem.
+
+# Good
+The problem has been fixed by doing x and y...
 ```
 
 ### Limit the number of characters
