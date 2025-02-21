@@ -25,6 +25,7 @@ It may help you to learn what a commit is, why it is important to write good mes
 - [Française](README_fr-FR.md)
 - [پارسی](README_fa-IR.md)
 - [Polish](README_pl-PL.md)
+- [Azərbaycanca](README_az-AZ.md)
 
 ## What is a "commit"?
 
