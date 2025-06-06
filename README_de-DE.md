@@ -210,7 +210,7 @@ See also: #456, #789
 
 ## Rebase vs _Merge_
 
-Dieser Abschnitt ist ein **Tl;DR** des lesenswerten Artikels [Atlassian's article Merging vs. Rebasing (Quelle auf Englisch)](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+Dieser Abschnitt ist ein **TL;DR** des lesenswerten Artikels [Atlassian's article Merging vs. Rebasing (Quelle auf Englisch)](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 ![](https://wac-cdn.atlassian.com/dam/jcr:01b0b04e-64f3-4659-af21-c4d86bc7cb0b/01.svg?cdnVersion=hq)
 
